@@ -1,0 +1,28 @@
+# Mac OS X
+.DS_Store
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+thanks.xcworkspace/project.xcworkspace/
+thanks.xcworkspace/xcuserdata/
+thanks.xcodeproj/project.xcworkspace/
+thanks.xcodeproj/xcuserdata/
+
+# Generated files
+*.o
+*.pyc
+
+# secure
+thanks/Application/info.plist
+
+# Backup files
+*.swp
+*~.nib
+
+# CocoaPods
+Pods/*
+
