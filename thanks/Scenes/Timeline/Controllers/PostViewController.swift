@@ -30,9 +30,8 @@ class PostViewController: UIViewController {
     }
 
     func layoutNavigationBar() {
-        let deleteImage = UIImage(named: "Delete-25")!
+        let deleteImage = UIImage(named: "Delete-100")?.resize(afterWidth: 22, afterHeight: 22)
         let leftButton = UIBarButtonItem(image: deleteImage, style: .Plain, target: self, action: "clickCloseButton:")
-        leftButton.tintColor = UIColor.darkGrayColor()
         self.navigationItem.leftBarButtonItem = leftButton
     }
 

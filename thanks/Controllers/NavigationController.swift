@@ -19,6 +19,8 @@ class NavigationController: UINavigationController {
     func layoutNavigationBar() {
         navigationBar.translucent = false
         navigationBar.backgroundColor = UIColor.whiteColor()
+        navigationBar.tintColor = UIColor.deepGrayColor()
+        navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: UIFont.standardFontName(), size: 14)!]
     }
     
 }

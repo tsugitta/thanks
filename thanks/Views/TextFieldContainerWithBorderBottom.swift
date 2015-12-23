@@ -23,7 +23,7 @@ class TextFieldContainerWithBorderBottom: UIView {
         
         borderBottom.removeFromSuperlayer()
         borderBottom.frame = CGRectMake(0, frame.height - borderWidth, frame.width, borderWidth)
-        borderBottom.backgroundColor = UIColor.lightGrayColor().CGColor
+        borderBottom.backgroundColor = UIColor.veryLightGrayColor().CGColor
         layer.addSublayer(borderBottom)
     }
 

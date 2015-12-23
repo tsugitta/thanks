@@ -19,9 +19,7 @@ class NonBorderTextField: UITextField {
 
     private func setup() {
         borderStyle = .None
-        textAlignment = .Center
-        textColor = UIColor.lightGrayColor()
-//        font = font?.fontWithSize(18)
+        textColor = UIColor.deepGrayColor()
     }
     
 }

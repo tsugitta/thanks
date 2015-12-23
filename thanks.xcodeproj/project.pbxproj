@@ -53,7 +53,6 @@
 		DFB616731C2A95CF00DDB58B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616721C2A95CF00DDB58B /* TabBar.swift */; };
 		DFB616751C2A9CDF00DDB58B /* UserEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616741C2A9CDF00DDB58B /* UserEditViewController.swift */; };
 		DFB616771C2A9D8900DDB58B /* UserEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616761C2A9D8900DDB58B /* UserEditView.swift */; };
-		DFB616791C2AA38600DDB58B /* SocialConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616781C2AA38600DDB58B /* SocialConnectButton.swift */; };
 		DFB6167B1C2AA8BF00DDB58B /* NonBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6167A1C2AA8BF00DDB58B /* NonBorderTextField.swift */; };
 		DFB6167D1C2AA90B00DDB58B /* TextFieldContainerWithBorderBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6167C1C2AA90B00DDB58B /* TextFieldContainerWithBorderBottom.swift */; };
 		DFB616801C2AAFAA00DDB58B /* Checkmark-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DFB6167E1C2AAFAA00DDB58B /* Checkmark-100.png */; };
@@ -67,6 +66,10 @@
 		DFB616941C2B02D100DDB58B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616931C2B02D100DDB58B /* NavigationController.swift */; };
 		DFB616961C2B206800DDB58B /* NoImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DFB616951C2B206800DDB58B /* NoImage.jpg */; };
 		DFB616981C2B2EA000DDB58B /* Back-25.png in Resources */ = {isa = PBXBuildFile; fileRef = DFB616971C2B2EA000DDB58B /* Back-25.png */; };
+		DFB6169A1C2B4AB900DDB58B /* GrayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616991C2B4AB900DDB58B /* GrayButton.swift */; };
+		DFB6169C1C2B4AFD00DDB58B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6169B1C2B4AFD00DDB58B /* UIColor+Extension.swift */; };
+		DFB6169E1C2B532B00DDB58B /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6169D1C2B532B00DDB58B /* CircleImageView.swift */; };
+		DFB616A01C2B59E600DDB58B /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6169F1C2B59E600DDB58B /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +144,6 @@
 		DFB616721C2A95CF00DDB58B /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DFB616741C2A9CDF00DDB58B /* UserEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEditViewController.swift; sourceTree = "<group>"; };
 		DFB616761C2A9D8900DDB58B /* UserEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEditView.swift; sourceTree = "<group>"; };
-		DFB616781C2AA38600DDB58B /* SocialConnectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialConnectButton.swift; path = Views/SocialConnectButton.swift; sourceTree = "<group>"; };
 		DFB6167A1C2AA8BF00DDB58B /* NonBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NonBorderTextField.swift; path = Views/NonBorderTextField.swift; sourceTree = "<group>"; };
 		DFB6167C1C2AA90B00DDB58B /* TextFieldContainerWithBorderBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldContainerWithBorderBottom.swift; path = Views/TextFieldContainerWithBorderBottom.swift; sourceTree = "<group>"; };
 		DFB6167E1C2AAFAA00DDB58B /* Checkmark-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark-100.png"; sourceTree = "<group>"; };
@@ -155,6 +157,10 @@
 		DFB616931C2B02D100DDB58B /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Controllers/NavigationController.swift; sourceTree = "<group>"; };
 		DFB616951C2B206800DDB58B /* NoImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NoImage.jpg; sourceTree = "<group>"; };
 		DFB616971C2B2EA000DDB58B /* Back-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-25.png"; sourceTree = "<group>"; };
+		DFB616991C2B4AB900DDB58B /* GrayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GrayButton.swift; path = Views/GrayButton.swift; sourceTree = "<group>"; };
+		DFB6169B1C2B4AFD00DDB58B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		DFB6169D1C2B532B00DDB58B /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleImageView.swift; path = Views/CircleImageView.swift; sourceTree = "<group>"; };
+		DFB6169F1C2B59E600DDB58B /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +278,8 @@
 				DF0B01DF1C24E01D00308E55 /* Optional+Extension.swift */,
 				DFB616821C2AB3CE00DDB58B /* UIImage+Extension.swift */,
 				DFB6168E1C2AC8CD00DDB58B /* UIButton+Extension.swift */,
+				DFB6169B1C2B4AFD00DDB58B /* UIColor+Extension.swift */,
+				DFB6169F1C2B59E600DDB58B /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -417,10 +425,11 @@
 		DFB616521C264F5300DDB58B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DFB616781C2AA38600DDB58B /* SocialConnectButton.swift */,
 				DFB6167A1C2AA8BF00DDB58B /* NonBorderTextField.swift */,
 				DFB6167C1C2AA90B00DDB58B /* TextFieldContainerWithBorderBottom.swift */,
 				DFB6168C1C2ABD7600DDB58B /* AvatarButton.swift */,
+				DFB616991C2B4AB900DDB58B /* GrayButton.swift */,
+				DFB6169D1C2B532B00DDB58B /* CircleImageView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -670,14 +679,18 @@
 				DF0B021C1C24E02600308E55 /* TimelineTopView.swift in Sources */,
 				DFB6165B1C28835C00DDB58B /* MyPageTopView.swift in Sources */,
 				DF0B01D91C24E01400308E55 /* AppDelegate.swift in Sources */,
+				DFB616A01C2B59E600DDB58B /* UIFont+Extension.swift in Sources */,
 				DF0B02141C24E02600308E55 /* SignUpView.swift in Sources */,
+				DFB6169E1C2B532B00DDB58B /* CircleImageView.swift in Sources */,
 				DFB6164D1C24ED6000DDB58B /* PostViewController.swift in Sources */,
 				DFB616771C2A9D8900DDB58B /* UserEditView.swift in Sources */,
 				DFB6164F1C24ED7A00DDB58B /* PostView.swift in Sources */,
 				DFB6168F1C2AC8CD00DDB58B /* UIButton+Extension.swift in Sources */,
 				DFB6167B1C2AA8BF00DDB58B /* NonBorderTextField.swift in Sources */,
+				DFB6169C1C2B4AFD00DDB58B /* UIColor+Extension.swift in Sources */,
 				DFB616591C28835000DDB58B /* MyPageTopViewController.swift in Sources */,
 				DF0B01EC1C24E02200308E55 /* ThankManager.swift in Sources */,
+				DFB6169A1C2B4AB900DDB58B /* GrayButton.swift in Sources */,
 				DF0B021A1C24E02600308E55 /* TimelineThanksTableViewCell.swift in Sources */,
 				DF0B01E01C24E01D00308E55 /* Optional+Extension.swift in Sources */,
 				DF0B02181C24E02600308E55 /* TimelineTopViewModel.swift in Sources */,
@@ -695,7 +708,6 @@
 				DF0B01E91C24E02200308E55 /* CurrentUser.swift in Sources */,
 				DFB616751C2A9CDF00DDB58B /* UserEditViewController.swift in Sources */,
 				DFB616831C2AB3CE00DDB58B /* UIImage+Extension.swift in Sources */,
-				DFB616791C2AA38600DDB58B /* SocialConnectButton.swift in Sources */,
 				DFB616891C2AB7B300DDB58B /* UserEditViewModel.swift in Sources */,
 				DF0B01ED1C24E02200308E55 /* User.swift in Sources */,
 				DF0B020D1C24E02600308E55 /* SignUpViewController.swift in Sources */,

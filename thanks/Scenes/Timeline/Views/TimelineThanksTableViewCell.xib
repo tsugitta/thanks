@@ -20,12 +20,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-lr-CC5">
                                 <rect key="frame" x="0.0" y="0.0" width="344" height="48"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arimura.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-ew-Dki">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arimura.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-ew-Dki" customClass="CircleImageView" customModule="thanks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="1ui-ky-BcK"/>
                                             <constraint firstAttribute="height" constant="48" id="hb4-QE-2K5"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PZ7-S2-CPE">
                                         <rect key="frame" x="58" y="0.0" width="286" height="48"/>

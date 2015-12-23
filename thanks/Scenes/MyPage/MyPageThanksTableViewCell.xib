@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,31 +16,46 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cUW-Sm-RXQ">
-                        <rect key="frame" x="10" y="5" width="344" height="165"/>
+                        <rect key="frame" x="8" y="5" width="348" height="165"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-lr-CC5">
-                                <rect key="frame" x="0.0" y="0.0" width="344" height="48"/>
+                                <rect key="frame" x="0.0" y="0.0" width="348" height="165"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arimura.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-ew-Dki">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arimura.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-ew-Dki" customClass="CircleImageView" customModule="thanks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="1ui-ky-BcK"/>
                                             <constraint firstAttribute="height" constant="48" id="hb4-QE-2K5"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PZ7-S2-CPE">
-                                        <rect key="frame" x="58" y="0.0" width="286" height="48"/>
+                                        <rect key="frame" x="58" y="0.0" width="290" height="165"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arimura Kasumi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfu-IU-VS6">
-                                                <rect key="frame" x="0.0" y="0.0" width="286" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="enZ-n2-et7"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="to: world" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsE-QP-6BO">
-                                                <rect key="frame" x="0.0" y="28" width="286" height="20"/>
+                                                <rect key="frame" x="0.0" y="30" width="290" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="sRg-mb-71Q"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" red="0.27041661449999999" green="0.51692684170000003" blue="0.77692945079999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks to say hello to me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmV-EF-NiE">
+                                                <rect key="frame" x="0.0" y="50" width="290" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -63,34 +79,28 @@
                                     <constraint firstAttribute="trailing" secondItem="PZ7-S2-CPE" secondAttribute="trailing" id="w8q-y1-3Tu"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks to say hello to me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmV-EF-NiE">
-                                <rect key="frame" x="0.0" y="53" width="344" height="112"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Lra-lr-CC5" firstAttribute="leading" secondItem="cUW-Sm-RXQ" secondAttribute="leading" id="2Kt-13-Bsy"/>
-                            <constraint firstItem="FmV-EF-NiE" firstAttribute="leading" secondItem="cUW-Sm-RXQ" secondAttribute="leading" id="BXO-EV-33F"/>
                             <constraint firstItem="Lra-lr-CC5" firstAttribute="top" secondItem="cUW-Sm-RXQ" secondAttribute="top" id="Odg-wa-u5Y"/>
-                            <constraint firstAttribute="trailing" secondItem="FmV-EF-NiE" secondAttribute="trailing" id="SoU-TI-ke1"/>
                             <constraint firstAttribute="trailing" secondItem="Lra-lr-CC5" secondAttribute="trailing" id="ZIO-ec-R1r"/>
-                            <constraint firstItem="FmV-EF-NiE" firstAttribute="top" secondItem="Lra-lr-CC5" secondAttribute="bottom" constant="5" id="zDF-Yb-qw2"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="zDF-Yb-qw2"/>
-                            </mask>
-                        </variation>
                     </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="cUW-Sm-RXQ" secondAttribute="trailing" constant="10" id="0Yi-yB-hQp"/>
                     <constraint firstItem="cUW-Sm-RXQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="7lW-KN-Hmo"/>
+                    <constraint firstItem="cUW-Sm-RXQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Bpe-yf-SZx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="cUW-Sm-RXQ" secondAttribute="trailing" id="GgQ-fz-ItD"/>
                     <constraint firstItem="cUW-Sm-RXQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hja-SB-dz3"/>
                     <constraint firstAttribute="bottom" secondItem="cUW-Sm-RXQ" secondAttribute="bottom" constant="5" id="r8D-lb-Ra7"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="0Yi-yB-hQp"/>
+                        <exclude reference="hja-SB-dz3"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="toWhatLabel" destination="FmV-EF-NiE" id="nRY-Uc-Wmc"/>

@@ -36,14 +36,11 @@ class UserEditViewController: UIViewController, UINavigationControllerDelegate, 
     }
     
     func layoutNavigationBar() {
-        let deleteImage = UIImage(named: "Delete-25")!
-        let checkImage = UIImage(named: "Checkmark-25")!
+        let deleteImage = UIImage(named: "Delete-100")?.resize(afterWidth: 22, afterHeight: 22)
+        let checkImage = UIImage(named: "Checkmark-100")?.resize(afterWidth: 22, afterHeight: 22)
 
         let leftButton = UIBarButtonItem(image: deleteImage, style: .Plain, target: self, action: "clickCloseButton:")
         let rightButton = UIBarButtonItem(image: checkImage, style: .Plain, target: self, action: "clickPostButton:")
-        
-        leftButton.tintColor = UIColor.darkGrayColor()
-        rightButton.tintColor = UIColor.darkGrayColor()
         
         self.navigationItem.leftBarButtonItem = leftButton
         self.navigationItem.rightBarButtonItem = rightButton

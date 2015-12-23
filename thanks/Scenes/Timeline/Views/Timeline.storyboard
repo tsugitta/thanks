@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="1103.5" y="480.5"/>
         </scene>
-        <!--Post View Controller-->
+        <!--Post-->
         <scene sceneID="CQ4-yY-5sv">
             <objects>
                 <viewController id="oc0-y6-NDb" customClass="PostViewController" customModule="thanks" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                             <outlet property="toWhomTextField" destination="9Sh-e8-ffD" id="We8-p3-JC1"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="JCL-BM-V6l"/>
+                    <navigationItem key="navigationItem" title="Post" id="JCL-BM-V6l"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="War-Ot-idM" userLabel="First Responder" sceneMemberID="firstResponder"/>
