@@ -32,21 +32,10 @@ class TabBarViewController: UITabBarController {
 
     func layoutTabBarItems() {
         tabBar.translucent = false
-//        let font:UIFont! = UIFont(name:"HelveticaNeue-Bold",size:10)
-//
-//        let normalAttributes: NSDictionary! = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.lightGrayColor()]
-//        let selectedAttributes: NSDictionary! = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.black]
-//        
-//        let selectedAttributes: NSDictionary! = [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor(red:0.13, green:0.55, blue:0.83, alpha:1.0)]
-//
-//        navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: UIFont.standardFontName(), size: 14)!]
         tabBar.tintColor = UIColor.deepGrayColor()
-
-        for item in tabBar.items! {
-            item.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
-            item.setTitleTextAttributes([NSFontAttributeName: UIFont(name: UIFont.standardFontName(), size: 14)!], forState: .Normal)
-
-        }
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: UIFont.standardFontName(), size: 14)!], forState: .Normal)
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0, -6)
     }
     
 }
