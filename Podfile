@@ -6,7 +6,6 @@ use_frameworks!
 target 'thanks' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
-  pod 'PhotoTweaks', '~> 1.0.2'
 end
 
 target 'thanksTests' do

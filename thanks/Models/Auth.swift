@@ -36,7 +36,7 @@ class Auth {
             ]
         ]
         
-        Alamofire.request(.POST, "\(Settings.ApiRootPath)api/users/", parameters: params)
+        Alamofire.request(.POST, "\(Settings.ApiRootPath)/api/users/", parameters: params)
             .responseJSON { response in
                 guard response.result.error == nil else {
                     // Can't connect to the server.
@@ -52,7 +52,7 @@ class Auth {
                     return
                 }
                 print(json)
-                let user = User(json: json["user"])
+                let user = User(jsonWithOnlyUser: json["user"])
                 self.currentUser.user = user
                 self.saveAuthToken(json["auth_token"].string!)
         }
@@ -75,23 +75,27 @@ class Auth {
     }
     
     func signIn() {
-        
+
     }
     
     func signInWithAuthToken() {
         let defaults = NSUserDefaults.standardUserDefaults()
         let token = defaults.objectForKey("AuthToken") as! String
-        Alamofire.request(.POST, "\(Settings.ApiRootPath)api/user_sessions/create_with_token", parameters: nil, headers: ["AuthToken": token])
-            .responseJSON { response in
-                guard response.result.error == nil else {
-                    // Can't connect to the server.
-                    print("Can't connect to the server: \(response.result.error!)")
-                    return
-                }
-                
-                let json = JSON(response.result.value!)
-                let user = User(json: json["user"])
-                self.currentUser.user = user
+        Alamofire.request(
+            .POST,
+            "\(Settings.ApiRootPath)/api/user_sessions/create_with_token",
+            parameters: nil,
+            headers: ["AuthToken": token]
+        ).responseJSON { response in
+            guard response.result.error == nil else {
+                // Can't connect to the server.
+                print("Can't connect to the server: \(response.result.error!)")
+                return
+            }
+            
+            let json = JSON(response.result.value!)
+            let user = User(jsonWithTweets: json)
+            self.currentUser.user = user
         }
     }
 

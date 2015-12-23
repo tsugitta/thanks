@@ -8,18 +8,18 @@
 
 import UIKit
 
-class TimelineTableViewCell: UITableViewCell {
+class TimelineThanksTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var toNameLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var toWhomLabel: UILabel!
+    @IBOutlet weak var toWhatLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         layoutUserImageView()
         layoutUserNameLabel()
-        contentLabel.numberOfLines = 0
+        toWhatLabel.numberOfLines = 0
     }
 
     func layoutUserImageView() {

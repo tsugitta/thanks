@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let auth = Auth.sharedInstance
         if auth.alreadyHasToken() {
             auth.signInWithAuthToken()
-        } else {
-            let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+            let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
             let vc = storyboard.instantiateInitialViewController()
             window?.rootViewController = vc
         }

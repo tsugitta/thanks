@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Thank {
-    var id: Int?
-    var user: User?
-    var createdAt: NSDate?
-    var text: String?
+
+    var id: Int!
+    var toWhom: String!
+    var toWhat: String!
+    var user: User!
     
-    init() {
+    init(json: JSON) {
+        self.id = json["id"].int
+        self.toWhom = json["to_whom"].string
+        self.toWhat = json["to_what"].string
+        self.user = User(jsonWithOnlyUser: json["user"])
     }
+
 }

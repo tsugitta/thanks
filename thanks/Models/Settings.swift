@@ -8,6 +8,6 @@
 
 struct Settings {
     
-    static let ApiRootPath = "http://localhost:3000/"
+    static let ApiRootPath = "http://localhost:3000"
     
 }

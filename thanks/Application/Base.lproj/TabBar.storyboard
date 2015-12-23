@@ -10,7 +10,7 @@
             <objects>
                 <tabBarController id="4VW-a6-Lej" customClass="TabBarViewController" customModule="thanks" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="5xm-TH-ohJ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5xm-TH-ohJ" customClass="TabBar" customModule="thanks" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

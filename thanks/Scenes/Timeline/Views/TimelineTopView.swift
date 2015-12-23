@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TimelineTopViewDelegate: class {
-    func timelineTopViewDidTapCenterButton(timelineTopView: TimelineTopView)
+//    func timelineTopViewDidTapCenterButton(timelineTopView: TimelineTopView)
 }
 
 class TimelineTopView: UIView {
@@ -17,13 +17,14 @@ class TimelineTopView: UIView {
     weak var delegate: TimelineTopViewDelegate!
     
     @IBOutlet weak var tableView: UITableView!
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
     
     override func awakeFromNib() {
-        tableView.registerNib(UINib(nibName: "TimelineTableViewCell", bundle: nil), forCellReuseIdentifier: "TimelineTableViewCell")
+        tableView.registerNib(UINib(nibName: "TimelineThanksTableViewCell", bundle: nil), forCellReuseIdentifier: "TimelineThanksTableViewCell")
+    
+        layoutTableView()
+    }
+    
+    func layoutTableView() {
         tableView.estimatedRowHeight = 90
         tableView.rowHeight = UITableViewAutomaticDimension
     }

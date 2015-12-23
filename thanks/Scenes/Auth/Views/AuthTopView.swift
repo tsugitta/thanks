@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class AuthTopView: UIView {
     
     @IBOutlet weak var signUpButton: UIButton!

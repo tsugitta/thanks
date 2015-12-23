@@ -1,16 +1,13 @@
 PODS:
   - Alamofire (3.1.4)
-  - PhotoTweaks (1.0.2)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
-  - PhotoTweaks (~> 1.0.2)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
-  PhotoTweaks: e91ce097f9df435049e7c35d419f9a7749e252bc
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

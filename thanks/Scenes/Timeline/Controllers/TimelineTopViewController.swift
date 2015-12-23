@@ -8,26 +8,48 @@
 
 import UIKit
 
-class TimelineTopViewController: UIViewController, TimelineTopViewDelegate, UITableViewDelegate {
+class TimelineTopViewController: UIViewController, TimelineTopViewDelegate, PostViewControllerDelegate, UITableViewDelegate {
 
     private let mModel = TimelineTopViewModel()
     private var mView: TimelineTopView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        ThankManager.sharedInstance.fetchThanks(completion: {
+            self.mView.tableView.reloadData()
+        })
+
         mView = view as! TimelineTopView
         mView.delegate = self
         mView.tableView.dataSource = mModel
         mView.tableView.delegate = self
+        
+        layoutNavigationBar()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func layoutNavigationBar() {
+        let rightButton = UIBarButtonItem(title: "post", style: .Plain, target: self, action: "clickPostButton:")
+        navigationItem.rightBarButtonItem = rightButton
+    }
+
+    func clickPostButton(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("FromTimelineTopToPost", sender: self)
+    }
+
+    func postViewControllerDidPostThank(postViewController: PostViewController) {
+        mView.tableView.reloadData()
     }
     
-    func timelineTopViewDidTapCenterButton(timelineTopView: TimelineTopView) {
-        performSegueWithIdentifier("HogeSegue", sender: self)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+        case "FromTimelineTopToPost":
+            let postNavigationVC = segue.destinationViewController as! NavigationController
+            let postVC = postNavigationVC.viewControllers.first as! PostViewController
+            postVC.delegate = self
+        default:
+            break
+        }
     }
-    
+
 }
