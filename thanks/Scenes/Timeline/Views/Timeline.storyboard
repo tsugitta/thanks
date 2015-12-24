@@ -39,6 +39,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="3mX-BK-aHA" kind="presentation" identifier="FromTimelineTopToPost" id="OIL-nN-xPV"/>
+                        <segue destination="hRb-GA-VPk" kind="show" identifier="FromTimelineTopToSearch" id="zl5-fu-x02"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jg6-vF-udd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -134,6 +135,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lt3-ND-rl7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="650.5" y="480.5"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="rnR-yN-kJL">
+            <objects>
+                <viewController id="hRb-GA-VPk" customClass="SearchViewController" customModule="thanks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QA6-SM-HEk"/>
+                        <viewControllerLayoutGuide type="bottom" id="LD7-YK-iqW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HyW-95-dUN" customClass="SearchView" customModule="thanks" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4L-UR-lyA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G4L-UR-lyA" firstAttribute="top" secondItem="QA6-SM-HEk" secondAttribute="bottom" id="9Sm-Ci-0c3"/>
+                            <constraint firstAttribute="trailing" secondItem="G4L-UR-lyA" secondAttribute="trailing" id="SOj-Cf-WYV"/>
+                            <constraint firstItem="G4L-UR-lyA" firstAttribute="leading" secondItem="HyW-95-dUN" secondAttribute="leading" id="Yjw-XC-S01"/>
+                            <constraint firstItem="LD7-YK-iqW" firstAttribute="top" secondItem="G4L-UR-lyA" secondAttribute="bottom" id="iDF-Wa-El8"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="tableView" destination="G4L-UR-lyA" id="yfY-ii-Atr"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="grI-9j-oh2" id="oLA-Gr-9sz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tW7-JE-NsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="grI-9j-oh2">
+                    <connections>
+                        <outlet property="delegate" destination="hRb-GA-VPk" id="YmP-kh-Fy7"/>
+                        <outlet property="searchContentsController" destination="hRb-GA-VPk" id="N3X-gv-y5t"/>
+                        <outlet property="searchResultsDataSource" destination="hRb-GA-VPk" id="tPa-sl-NBZ"/>
+                        <outlet property="searchResultsDelegate" destination="hRb-GA-VPk" id="44y-oZ-oNH"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1625.5" y="1213.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wEr-UE-ali">

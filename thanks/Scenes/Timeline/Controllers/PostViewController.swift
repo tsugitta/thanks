@@ -10,7 +10,9 @@ import UIKit
 import SwiftyJSON
 
 protocol PostViewControllerDelegate: class {
+    
     func postViewControllerDidPostThank(postViewController: PostViewController)
+    
 }
 
 class PostViewController: UIViewController {
@@ -64,7 +66,6 @@ class PostViewController: UIViewController {
             mView.toWhomTextField.text.isNotBlank &&
             mView.toWhatTextField.text.isNotBlank
     }
-    
     
 }
 

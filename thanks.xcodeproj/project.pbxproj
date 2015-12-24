@@ -39,6 +39,13 @@
 		DF0B021A1C24E02600308E55 /* TimelineThanksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B02081C24E02600308E55 /* TimelineThanksTableViewCell.swift */; };
 		DF0B021B1C24E02600308E55 /* TimelineThanksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0B02091C24E02600308E55 /* TimelineThanksTableViewCell.xib */; };
 		DF0B021C1C24E02600308E55 /* TimelineTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B020A1C24E02600308E55 /* TimelineTopView.swift */; };
+		DF3C89ED1C2BB5A90086A72F /* AddUser-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3C89EC1C2BB5A90086A72F /* AddUser-100.png */; };
+		DF3C89EF1C2BEEF20086A72F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C89EE1C2BEEF20086A72F /* SearchViewController.swift */; };
+		DF3C89F11C2BEF1B0086A72F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C89F01C2BEF1B0086A72F /* SearchView.swift */; };
+		DF3C89F31C2BEF280086A72F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C89F21C2BEF280086A72F /* SearchViewModel.swift */; };
+		DF3C89F51C2BF0E50086A72F /* Back-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3C89F41C2BF0E50086A72F /* Back-100.png */; };
+		DF3C89F81C2C30390086A72F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C89F61C2C30390086A72F /* SearchTableViewCell.swift */; };
+		DF3C89F91C2C30390086A72F /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF3C89F71C2C30390086A72F /* SearchTableViewCell.xib */; };
 		DFB6164B1C24E3AF00DDB58B /* arimura.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DFB6164A1C24E3AF00DDB58B /* arimura.jpeg */; };
 		DFB6164D1C24ED6000DDB58B /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6164C1C24ED6000DDB58B /* PostViewController.swift */; };
 		DFB6164F1C24ED7A00DDB58B /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6164E1C24ED7A00DDB58B /* PostView.swift */; };
@@ -70,6 +77,9 @@
 		DFB6169C1C2B4AFD00DDB58B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6169B1C2B4AFD00DDB58B /* UIColor+Extension.swift */; };
 		DFB6169E1C2B532B00DDB58B /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6169D1C2B532B00DDB58B /* CircleImageView.swift */; };
 		DFB616A01C2B59E600DDB58B /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6169F1C2B59E600DDB58B /* UIFont+Extension.swift */; };
+		DFB616A21C2B6C5400DDB58B /* Edit-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DFB616A11C2B6C5400DDB58B /* Edit-100.png */; };
+		DFB616A41C2B6C5B00DDB58B /* Search-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DFB616A31C2B6C5B00DDB58B /* Search-100.png */; };
+		DFC769DD1C2C38AF00ECAD0F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC769DC1C2C38AF00ECAD0F /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +140,13 @@
 		DF0B02081C24E02600308E55 /* TimelineThanksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineThanksTableViewCell.swift; sourceTree = "<group>"; };
 		DF0B02091C24E02600308E55 /* TimelineThanksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineThanksTableViewCell.xib; sourceTree = "<group>"; };
 		DF0B020A1C24E02600308E55 /* TimelineTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTopView.swift; sourceTree = "<group>"; };
+		DF3C89EC1C2BB5A90086A72F /* AddUser-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddUser-100.png"; sourceTree = "<group>"; };
+		DF3C89EE1C2BEEF20086A72F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DF3C89F01C2BEF1B0086A72F /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		DF3C89F21C2BEF280086A72F /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		DF3C89F41C2BF0E50086A72F /* Back-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back-100.png"; sourceTree = "<group>"; };
+		DF3C89F61C2C30390086A72F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		DF3C89F71C2C30390086A72F /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		DFB6164A1C24E3AF00DDB58B /* arimura.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = arimura.jpeg; sourceTree = "<group>"; };
 		DFB6164C1C24ED6000DDB58B /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		DFB6164E1C24ED7A00DDB58B /* PostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -161,6 +178,9 @@
 		DFB6169B1C2B4AFD00DDB58B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		DFB6169D1C2B532B00DDB58B /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleImageView.swift; path = Views/CircleImageView.swift; sourceTree = "<group>"; };
 		DFB6169F1C2B59E600DDB58B /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		DFB616A11C2B6C5400DDB58B /* Edit-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edit-100.png"; sourceTree = "<group>"; };
+		DFB616A31C2B6C5B00DDB58B /* Search-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search-100.png"; sourceTree = "<group>"; };
+		DFC769DC1C2C38AF00ECAD0F /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +313,7 @@
 				DF0B01E51C24E02200308E55 /* Thank.swift */,
 				DF0B01E61C24E02200308E55 /* ThankManager.swift */,
 				DF0B01E71C24E02200308E55 /* User.swift */,
+				DFC769DC1C2C38AF00ECAD0F /* UserManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,6 +404,7 @@
 			children = (
 				DF0B02031C24E02600308E55 /* TimelineTopViewController.swift */,
 				DFB6164C1C24ED6000DDB58B /* PostViewController.swift */,
+				DF3C89EE1C2BEEF20086A72F /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -392,6 +414,7 @@
 			children = (
 				DF0B02051C24E02600308E55 /* TimelineTopViewModel.swift */,
 				DFB616501C24EF1B00DDB58B /* PostViewModel.swift */,
+				DF3C89F21C2BEF280086A72F /* SearchViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -404,6 +427,9 @@
 				DF0B02091C24E02600308E55 /* TimelineThanksTableViewCell.xib */,
 				DF0B020A1C24E02600308E55 /* TimelineTopView.swift */,
 				DFB6164E1C24ED7A00DDB58B /* PostView.swift */,
+				DF3C89F01C2BEF1B0086A72F /* SearchView.swift */,
+				DF3C89F61C2C30390086A72F /* SearchTableViewCell.swift */,
+				DF3C89F71C2C30390086A72F /* SearchTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -411,9 +437,13 @@
 		DFB616491C24E3A700DDB58B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DF3C89F41C2BF0E50086A72F /* Back-100.png */,
 				DFB616951C2B206800DDB58B /* NoImage.jpg */,
 				DFB616971C2B2EA000DDB58B /* Back-25.png */,
 				DFB616841C2AB4F200DDB58B /* Delete-25.png */,
+				DFB616A31C2B6C5B00DDB58B /* Search-100.png */,
+				DF3C89EC1C2BB5A90086A72F /* AddUser-100.png */,
+				DFB616A11C2B6C5400DDB58B /* Edit-100.png */,
 				DFB616851C2AB4F200DDB58B /* Checkmark-25.png */,
 				DFB6167E1C2AAFAA00DDB58B /* Checkmark-100.png */,
 				DFB6167F1C2AAFAA00DDB58B /* Delete-100.png */,
@@ -581,8 +611,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3C89ED1C2BB5A90086A72F /* AddUser-100.png in Resources */,
 				DF0B02111C24E02600308E55 /* Main.storyboard in Resources */,
+				DFB616A41C2B6C5B00DDB58B /* Search-100.png in Resources */,
 				DFB616861C2AB4F200DDB58B /* Delete-25.png in Resources */,
+				DF3C89F91C2C30390086A72F /* SearchTableViewCell.xib in Resources */,
 				DFB616801C2AAFAA00DDB58B /* Checkmark-100.png in Resources */,
 				DFB616981C2B2EA000DDB58B /* Back-25.png in Resources */,
 				DF0B01DA1C24E01400308E55 /* Assets.xcassets in Resources */,
@@ -593,10 +626,12 @@
 				DF0B02151C24E02600308E55 /* MyPage.storyboard in Resources */,
 				DFB6166D1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.xib in Resources */,
 				DF0B01DC1C24E01400308E55 /* TabBar.storyboard in Resources */,
+				DF3C89F51C2BF0E50086A72F /* Back-100.png in Resources */,
 				DF0B01DB1C24E01400308E55 /* LaunchScreen.storyboard in Resources */,
 				DF0B02191C24E02600308E55 /* Timeline.storyboard in Resources */,
 				DFB616811C2AAFAA00DDB58B /* Delete-100.png in Resources */,
 				DFB6164B1C24E3AF00DDB58B /* arimura.jpeg in Resources */,
+				DFB616A21C2B6C5400DDB58B /* Edit-100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +708,7 @@
 				DF0B02131C24E02600308E55 /* SignInView.swift in Sources */,
 				DFB616941C2B02D100DDB58B /* NavigationController.swift in Sources */,
 				DF0B02171C24E02600308E55 /* TimelineTopViewController.swift in Sources */,
+				DF3C89F81C2C30390086A72F /* SearchTableViewCell.swift in Sources */,
 				DF0B020E1C24E02600308E55 /* AuthTopViewModel.swift in Sources */,
 				DF0B01E81C24E02200308E55 /* Auth.swift in Sources */,
 				DF0B02101C24E02600308E55 /* SignUpViewModel.swift in Sources */,
@@ -691,19 +727,23 @@
 				DFB616591C28835000DDB58B /* MyPageTopViewController.swift in Sources */,
 				DF0B01EC1C24E02200308E55 /* ThankManager.swift in Sources */,
 				DFB6169A1C2B4AB900DDB58B /* GrayButton.swift in Sources */,
+				DFC769DD1C2C38AF00ECAD0F /* UserManager.swift in Sources */,
 				DF0B021A1C24E02600308E55 /* TimelineThanksTableViewCell.swift in Sources */,
 				DF0B01E01C24E01D00308E55 /* Optional+Extension.swift in Sources */,
 				DF0B02181C24E02600308E55 /* TimelineTopViewModel.swift in Sources */,
 				DFB6168D1C2ABD7600DDB58B /* AvatarButton.swift in Sources */,
 				DF0B02161C24E02600308E55 /* TabBarViewController.swift in Sources */,
 				DFB6166C1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.swift in Sources */,
+				DF3C89F31C2BEF280086A72F /* SearchViewModel.swift in Sources */,
 				DF0B020B1C24E02600308E55 /* AuthTopViewController.swift in Sources */,
 				DF0B02121C24E02600308E55 /* AuthTopView.swift in Sources */,
+				DF3C89EF1C2BEEF20086A72F /* SearchViewController.swift in Sources */,
 				DFB616701C2A7BDF00DDB58B /* MyPageThanksTableViewCell.swift in Sources */,
 				DF0B01EB1C24E02200308E55 /* Thank.swift in Sources */,
 				DFB6165D1C28836700DDB58B /* MyPageTopViewModel.swift in Sources */,
 				DFB6167D1C2AA90B00DDB58B /* TextFieldContainerWithBorderBottom.swift in Sources */,
 				DF0B01EA1C24E02200308E55 /* Settings.swift in Sources */,
+				DF3C89F11C2BEF1B0086A72F /* SearchView.swift in Sources */,
 				DF0B020C1C24E02600308E55 /* SignInViewController.swift in Sources */,
 				DF0B01E91C24E02200308E55 /* CurrentUser.swift in Sources */,
 				DFB616751C2A9CDF00DDB58B /* UserEditViewController.swift in Sources */,

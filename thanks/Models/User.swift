@@ -17,6 +17,7 @@ class User {
     var profile: String!
     var avatarUrl: String?
     var avatar: UIImage?
+    var isFollowing: Bool?
     var thanks: [Thank]?
     
     init(jsonWithOnlyUser json: JSON) {
@@ -25,6 +26,7 @@ class User {
         self.name = json["name"].string
         self.profile = json["profile"].string
         self.avatarUrl = json["avatar_url"].string
+        self.isFollowing = json["is_following"].bool
     }
 
     init(jsonWithTweets json: JSON) {

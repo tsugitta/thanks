@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         UIFont.standardize()
+        
+        // I wanted to change the bgcolor of the textfield which is in the UISearchBar, but it hasn't been worked.
+        UITextField.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).backgroundColor = UIColor.veryLightGrayColor()
 
         return true
     }

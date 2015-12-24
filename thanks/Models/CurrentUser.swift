@@ -75,4 +75,78 @@ class CurrentUser {
         )
     }
     
+    func followUser(target_user: User, completion: () -> Void) {
+        let params = [
+            "relationship": [
+                "follower_id": user!.id,
+                "followee_id": target_user.id
+            ]
+        ]
+        
+        Alamofire.request(
+            .POST,
+            "\(Settings.ApiRootPath)/api/relationships",
+            parameters: params,
+            headers: ["AuthToken": Auth.sharedInstance.authToken!]
+        ).responseJSON { response in
+            guard response.result.error == nil else {
+                // Add error handling in the future
+                print("Can't connect to the server: \(response.result.error!)")
+                return
+            }
+            
+            let json = JSON(response.result.value!)
+            
+            guard json["is_following"] != nil else {
+                // Add error handling in the future
+                print("Can't get correct response: \(response.result.error!)")
+                return
+            }
+            
+            if json["is_following"].bool! {
+                target_user.isFollowing = true
+            } else {
+                target_user.isFollowing = false
+            }
+            completion()
+        }
+    }
+    
+    func unfollowUser(target_user: User, completion: () -> Void) {
+        let params = [
+            "relationship": [
+                "follower_id": user!.id,
+                "followee_id": target_user.id
+            ]
+        ]
+
+        Alamofire.request(
+            .DELETE,
+            "\(Settings.ApiRootPath)/api/relationships",
+            parameters: params,
+            headers: ["AuthToken": Auth.sharedInstance.authToken!]
+        ).responseJSON { response in
+            guard response.result.error == nil else {
+                // Add error handling in the future
+                print("Can't connect to the server: \(response.result.error!)")
+                return
+            }
+            
+            let json = JSON(response.result.value!)
+            
+            guard json["is_following"] != nil else {
+                // Add error handling in the future
+                print("Can't get correct response: \(response.result.error!)")
+                return
+            }
+            
+            if json["is_following"].bool! {
+                target_user.isFollowing = true
+            } else {
+                target_user.isFollowing = false
+            }
+            completion()
+        }
+    }
+    
 }

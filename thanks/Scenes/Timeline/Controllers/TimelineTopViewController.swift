@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineTopViewController: UIViewController, TimelineTopViewDelegate, PostViewControllerDelegate, UITableViewDelegate {
+class TimelineTopViewController: UIViewController, PostViewControllerDelegate, UITableViewDelegate {
 
     private let mModel = TimelineTopViewModel()
     private var mView: TimelineTopView!
@@ -21,7 +21,6 @@ class TimelineTopViewController: UIViewController, TimelineTopViewDelegate, Post
         })
 
         mView = view as! TimelineTopView
-        mView.delegate = self
         mView.tableView.dataSource = mModel
         mView.tableView.delegate = self
         
@@ -29,14 +28,24 @@ class TimelineTopViewController: UIViewController, TimelineTopViewDelegate, Post
     }
 
     func layoutNavigationBar() {
-        let rightButton = UIBarButtonItem(title: "post", style: .Plain, target: self, action: "clickPostButton:")
-        navigationItem.rightBarButtonItem = rightButton
+        let deleteImage = UIImage(named: "AddUser-100")?.resize(afterWidth: 22, afterHeight: 22)
+        let checkImage = UIImage(named: "Edit-100")?.resize(afterWidth: 22, afterHeight: 22)
+        
+        let leftButton = UIBarButtonItem(image: deleteImage, style: .Plain, target: self, action: "clickAddUserButton:")
+        let rightButton = UIBarButtonItem(image: checkImage, style: .Plain, target: self, action: "clickPostButton:")
+        
+        self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationItem.rightBarButtonItem = rightButton
     }
 
     func clickPostButton(sender: UIBarButtonItem) {
         performSegueWithIdentifier("FromTimelineTopToPost", sender: self)
     }
 
+    func clickAddUserButton(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("FromTimelineTopToSearch", sender: self)
+    }
+    
     func postViewControllerDidPostThank(postViewController: PostViewController) {
         mView.tableView.reloadData()
     }

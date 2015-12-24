@@ -29,10 +29,13 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
         switch section {
         case 0:
             return 1
+            
         case 1:
             return user.thanks!.count
+            
         default:
             return 0
+            
         }
     }
     
@@ -64,6 +67,7 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
             cell.userEditButton.addTarget(self, action: "didClickUserEditButton", forControlEvents: .TouchUpInside)
             
             return cell
+            
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("MyPageThanksTableViewCell", forIndexPath: indexPath) as! MyPageThanksTableViewCell
             
@@ -90,8 +94,10 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
             cell.toWhomLabel.text = thank.toWhom
             
             return cell
+            
         default:
             return UITableViewCell()
+            
         }
     }
     
@@ -99,10 +105,13 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             return 350
+            
         case 1:
             return 80
+            
         default:
             return 0
+            
         }
     }
     
@@ -110,10 +119,13 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             return 200
+            
         case 1:
             return 90
+            
         default:
             return 0
+            
         }
     }
     

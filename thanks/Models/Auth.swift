@@ -51,7 +51,7 @@ class Auth {
                     print("Invalid input: \(json["errors"])")
                     return
                 }
-                print(json)
+
                 let user = User(jsonWithOnlyUser: json["user"])
                 self.currentUser.user = user
                 self.saveAuthToken(json["auth_token"].string!)
