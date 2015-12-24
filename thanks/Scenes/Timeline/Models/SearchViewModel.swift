@@ -33,17 +33,26 @@ class SearchViewModel: NSObject, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SearchTableViewCell", forIndexPath: indexPath) as! SearchTableViewCell
         let user = userManager.searchedUsers[indexPath.row]
+        
         cell.userNameLabel.text = user.name
         cell.userThanksIdLabel.text = user.thanksId
         
+        if let avatarUrl = user.avatarUrl {
+            cell.userAvatarImageView.getCarrierWaveImageWithUrl(avatarUrl)
+        } else {
+            cell.userAvatarImageView.image = UIImage(named: "NoImage")
+        }
+
         if user.isFollowing! {
             cell.followButton.setTitle("Unfollow", forState: .Normal)
         } else {
             cell.followButton.setTitle("Follow", forState: .Normal)
         }
+        
         cell.followButton.tag = indexPath.row
         cell.followButton.addTarget(self, action: "didClickFollowButton:", forControlEvents: .TouchUpInside)
-//        cell
+        
+        
         return cell
     }
 

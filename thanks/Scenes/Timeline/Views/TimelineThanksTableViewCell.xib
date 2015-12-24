@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lra-lr-CC5">
                                 <rect key="frame" x="0.0" y="0.0" width="344" height="48"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arimura.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-ew-Dki" customClass="CircleImageView" customModule="thanks" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-ew-Dki" customClass="CircleImageView" customModule="thanks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="1ui-ky-BcK"/>
@@ -104,7 +104,4 @@
             <point key="canvasLocation" x="253" y="344"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="arimura.jpeg" width="295" height="295"/>
-    </resources>
 </document>

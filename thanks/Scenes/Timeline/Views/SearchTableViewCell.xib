@@ -61,7 +61,7 @@
                             </mask>
                         </variation>
                     </stackView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arimura.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-US-I9h" customClass="CircleImageView" customModule="thanks" customModuleProvider="target">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8wC-US-I9h" customClass="CircleImageView" customModule="thanks" customModuleProvider="target">
                         <rect key="frame" x="13" y="23" width="42" height="42"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="42" id="dth-S2-IaN"/>
@@ -101,7 +101,4 @@
             <point key="canvasLocation" x="227" y="322"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="arimura.jpeg" width="295" height="295"/>
-    </resources>
 </document>

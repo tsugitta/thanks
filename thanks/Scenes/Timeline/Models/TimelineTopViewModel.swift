@@ -23,6 +23,13 @@ class TimelineTopViewModel: NSObject, UITableViewDataSource {
         cell.userNameLabel.text = thank.user.name
         cell.toWhomLabel.text = thank.toWhom
         cell.toWhatLabel.text = thank.toWhat
+        
+        if let avatarUrl = thank.user.avatarUrl {
+            cell.userImageView.getCarrierWaveImageWithUrl(avatarUrl)
+        } else {
+            cell.userImageView.image = UIImage(named: "NoImage")
+        }
+
         return cell
     }
     

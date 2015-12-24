@@ -17,24 +17,11 @@ class TimelineThanksTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        layoutUserImageView()
-        layoutUserNameLabel()
         toWhatLabel.numberOfLines = 0
     }
 
-    func layoutUserImageView() {
-        userImageView.layer.cornerRadius = 4
-    }
-    
-    func layoutUserNameLabel() {
-        var rect = userNameLabel.frame
-        userNameLabel.sizeToFit()
-        rect.size.height = CGRectGetHeight(userNameLabel.frame)
-        userNameLabel.frame = rect
-    }
-    
     override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+//        super.setSelected(selected, animated: animated)
     }
     
 }

@@ -47,21 +47,11 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier("MyPageHeaderTableViewCell") as! MyPageHeaderTableViewCell
             
             if let avatarUrl = user.avatarUrl {
-                Alamofire.request(
-                    .GET,
-                    "\(Settings.ApiRootPath)\(avatarUrl)", // CarrierWave's avatar_url includes initial slash
-                    headers: ["AuthToken": Auth.sharedInstance.authToken!]
-                ).response { _, _, data, error in
-                    if error == nil {
-                        user.avatar = UIImage(data: data!)
-                    } else {
-                        user.avatar = UIImage(named: "NoImage")
-                    }
-                    
-                    cell.userAvatarImageView.image = user.avatar
-                }
+                cell.userAvatarImageView.getCarrierWaveImageWithUrl(avatarUrl)
+            } else {
+                cell.userAvatarImageView.image = UIImage(named: "NoImage")
             }
-
+            
             cell.userNameLabel.text = user.name
             cell.userProfileLabel.text = user.profile
             cell.userEditButton.addTarget(self, action: "didClickUserEditButton", forControlEvents: .TouchUpInside)
@@ -74,21 +64,11 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
             let thank = user.thanks![indexPath.row]
             
             if let avatarUrl = user.avatarUrl {
-                Alamofire.request(
-                    .GET,
-                    "\(Settings.ApiRootPath)\(avatarUrl)", // CarrierWave's avatar_url includes initial slash
-                    headers: ["AuthToken": Auth.sharedInstance.authToken!]
-                ).response { _, _, data, error in
-                    if error == nil {
-                        user.avatar = UIImage(data: data!)
-                    } else {
-                        user.avatar = UIImage(named: "NoImage")
-                    }
-                    
-                    cell.userImageView.image = user.avatar
-                }
+                cell.userImageView.getCarrierWaveImageWithUrl(avatarUrl)
+            } else {
+                cell.userImageView.image = UIImage(named: "NoImage")
             }
-            
+
             cell.userNameLabel.text = user.name
             cell.toWhatLabel.text = thank.toWhat
             cell.toWhomLabel.text = thank.toWhom

@@ -21,8 +21,8 @@ class UserEditView: UIView {
         displayedNameTextField.text = user.name
         profileTextField.text = user.profile
 
-        if let avatar = user.avatar {
-            userAvatarButton.setBackgroundImage(avatar, forState: .Normal)
+        if let avatarUrl = user.avatarUrl {
+            userAvatarButton.setCarrierWaveImageWithUrl(avatarUrl)
             userAvatarButton.setTitle("", forState: .Normal)
         }
     }

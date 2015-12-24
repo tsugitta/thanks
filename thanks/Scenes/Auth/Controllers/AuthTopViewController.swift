@@ -21,11 +21,11 @@ class AuthTopViewController: UIViewController {
         mView.signInButton.addTarget(self, action: "clickSignInButton:", forControlEvents: .TouchUpInside)
     }
     
-    func clickSignUpButton(authTopView: AuthTopView) {
+    func clickSignUpButton(sender: AuthTopView) {
         performSegueWithIdentifier("FromAuthTopToSignUp", sender: self)
     }
     
-    func clickSignInButton(authTopView: AuthTopView) {
+    func clickSignInButton(sender: AuthTopView) {
         performSegueWithIdentifier("FromAuthTopToSignIn", sender: self)
     }
     

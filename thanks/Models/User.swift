@@ -16,7 +16,6 @@ class User {
     var name: String!
     var profile: String!
     var avatarUrl: String?
-    var avatar: UIImage?
     var isFollowing: Bool?
     var thanks: [Thank]?
     

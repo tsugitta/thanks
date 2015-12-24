@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Alamofire
 
 extension UIImage {
- 
+
     func resize(afterWidth afterWidth: CGFloat, afterHeight: CGFloat) -> UIImage {
         let size = CGSize(width: afterWidth, height: afterHeight)
         UIGraphicsBeginImageContext(size)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 extension UIButton {
     
@@ -26,6 +27,27 @@ extension UIButton {
     
     func setBackgroundColor(color: UIColor, forUIControlState state: UIControlState) {
         self.setBackgroundImage(imageWithColor(color), forState: state)
+    }
+    
+    func setCarrierWaveImageWithUrl(avatarUrl: String) {
+        getImageAsynchronouslyWithUrl("\(Settings.ApiRootPath)\(avatarUrl)") // CarrierWave's avatar_url includes initial slash
+    }
+    
+    func getImageAsynchronouslyWithUrl(urlString: String) {
+        Alamofire.request(
+            .GET,
+            urlString,
+            headers: ["AuthToken": Auth.sharedInstance.authToken!]
+            ).response { _, _, data, error in
+                let gotImage: UIImage
+                if let imageFromData = UIImage(data: data!) {
+                    gotImage = imageFromData
+                    
+                } else {
+                    gotImage = UIImage(named: "NoImage")!
+                }
+                self.setBackgroundImage(gotImage, forState: .Normal)
+        }
     }
     
 }
