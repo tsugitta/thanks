@@ -27,11 +27,16 @@ extension UIImageView {
             } else {
                 gotImage = UIImage(named: "NoImage")!
             }
-            self.layer.opacity = 0
-            UIView.animateWithDuration(0.2, animations: {
+            
+            if self.image == nil {
+                self.layer.opacity = 0
+                UIView.animateWithDuration(0.2, animations: {
+                    self.image = gotImage
+                    self.layer.opacity = 1
+                })
+            } else {
                 self.image = gotImage
-                self.layer.opacity = 1
-            })
+            }
         }
     }
 }
