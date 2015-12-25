@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyPageTopViewController: UIViewController, UITableViewDelegate, MyPageTopViewDelegate, MyPageTopViewModelDelegate, UserEditViewControllerDelegate{
+class MyPageTopViewController: UIViewController, UITableViewDelegate, MyPageTopViewModelDelegate, UserEditViewControllerDelegate {
     
     private let mModel = MyPageTopViewModel()
     private var mView: MyPageTopView!
@@ -17,7 +17,6 @@ class MyPageTopViewController: UIViewController, UITableViewDelegate, MyPageTopV
         super.viewDidLoad()
         
         mView = view as! MyPageTopView
-        mView.delegate = self
         mView.tableView.dataSource = mModel
         mView.tableView.delegate = self
         mModel.delegate = self
@@ -27,7 +26,7 @@ class MyPageTopViewController: UIViewController, UITableViewDelegate, MyPageTopV
         mView.tableView.reloadData()
     }
     
-    func myPageTopViewModelDidTapUserEditButton(myPageTopViewModel: MyPageTopViewModel) {
+    func myPageTopViewModelDidClickUserEditButton(myPageTopViewModel: MyPageTopViewModel) {
         performSegueWithIdentifier("FromMyPageTopToUserEdit", sender: self)
     }
 
@@ -49,5 +48,4 @@ class MyPageTopViewController: UIViewController, UITableViewDelegate, MyPageTopV
     func userEditViewControllerDidUpload(userEditViewController: UserEditViewController) {
         mView.tableView.reloadData()
     }
-    
 }

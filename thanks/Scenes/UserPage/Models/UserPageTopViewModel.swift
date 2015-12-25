@@ -1,31 +1,29 @@
 //
-//  MyPageTopViewModel.swift
+//  UserPageViewModel.swift
 //  thanks
 //
-//  Created by sdklt on 2015/12/22.
+//  Created by sdklt on 2015/12/25.
 //  Copyright © 2015年 sdklt. All rights reserved.
 //
 
 import UIKit
-import Alamofire
 
-protocol MyPageTopViewModelDelegate: class {
-    func myPageTopViewModelDidClickUserEditButton(myPageTopViewModel: MyPageTopViewModel)
+protocol UserPageTopViewModelDelegate: class {
+    
+    func userPageTopViewModelDidUpdateFollowingStatus(userPageTopViewModel: UserPageTopViewModel)
+    
 }
 
-class MyPageTopViewModel: NSObject, UITableViewDataSource {
+class UserPageTopViewModel: NSObject, UITableViewDataSource {
     
-    weak var delegate: MyPageTopViewModelDelegate!
+    weak var delegate: UserPageTopViewModelDelegate!
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
-    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let user = CurrentUser.sharedInstance.user else {
-            return 0
-        }
-        
+        let user = UserManager.sharedInstance.showingUser
         switch section {
         case 0:
             return 1
@@ -40,13 +38,12 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let user = CurrentUser.sharedInstance.user!
-
+        let user = UserManager.sharedInstance.showingUser
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCellWithIdentifier("MyPageHeaderTableViewCell") as! MyPageHeaderTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("UserPageHeaderTableViewCell") as! UserPageHeaderTableViewCell
             cell.updateLabelsWithUser(user)
-            cell.userEditButton.addTarget(self, action: "didClickUserEditButton", forControlEvents: .TouchUpInside)
+            cell.userFollowButton.addTarget(self, action: "didClickUserFollowButton:", forControlEvents: .TouchUpInside)
             return cell
             
         case 1:
@@ -76,9 +73,18 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
             
         }
     }
-        
-    func didClickUserEditButton() {
-        delegate?.myPageTopViewModelDidClickUserEditButton(self)
+    
+    func didClickUserFollowButton(sender: UIButton) {
+        let user = UserManager.sharedInstance.showingUser
+        if user.isFollowing! {
+            CurrentUser.sharedInstance.unfollowUser(user, completion: {
+                self.delegate!.userPageTopViewModelDidUpdateFollowingStatus(self)
+            })
+        } else {
+            CurrentUser.sharedInstance.followUser(user, completion: {
+                self.delegate!.userPageTopViewModelDidUpdateFollowingStatus(self)
+            })
+        }
     }
     
 }

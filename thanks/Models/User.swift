@@ -28,12 +28,13 @@ class User {
         self.isFollowing = json["is_following"].bool
     }
 
-    init(jsonWithTweets json: JSON) {
+    init(jsonWithThanks json: JSON) {
         self.id = json["user"]["id"].int
         self.thanksId = json["user"]["thanks_id"].string
         self.name = json["user"]["name"].string
         self.profile = json["user"]["profile"].string
         self.avatarUrl = json["user"]["avatar_url"].string
+        self.isFollowing = json["user"]["is_following"].bool
         
         var newThanks = [Thank]()
         for (_, thankJson) in json["thanks"] {

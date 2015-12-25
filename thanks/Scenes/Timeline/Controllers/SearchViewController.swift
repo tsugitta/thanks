@@ -12,6 +12,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
 
     private let mModel = SearchViewModel()
     private var mView: SearchView!
+
+    private var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +23,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         mView.tableView.delegate = self
         mModel.delegate = self
 
+        UserManager.sharedInstance.searchedUsers = []
+        
         layoutNavigationBar()
+        let tapGesture = UITapGestureRecognizer(target: self, action: "didClickTableView:")
+        mView.tableView.addGestureRecognizer(tapGesture)
     }
 
-    override func viewWillAppear(animated: Bool) {
-        UserManager.sharedInstance.searchedUsers = []
-    }
-    
     func layoutNavigationBar() {
-        let searchBar = UISearchBar()
+        searchBar = UISearchBar()
         searchBar.delegate = self
         navigationItem.titleView = searchBar
         
@@ -50,8 +52,25 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         return mModel.tableView(tableView, heightForRowAtIndexPath: indexPath)
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        searchBar.resignFirstResponder()
+        
+        let user = UserManager.sharedInstance.searchedUsers[indexPath.row]
+        UserManager.sharedInstance.showingUser = user
+        
+        let storyboard = UIStoryboard(name: "UserPage", bundle: nil)
+        let navigationVC = storyboard.instantiateInitialViewController() as! NavigationController
+        let userVC = navigationVC.viewControllers.first as! UserPageTopViewController
+
+        navigationController?.pushViewController(userVC, animated: true)
+    }
+    
     func searchViewModelDidUpdateFollowingStatus(searchViewModel: SearchViewModel) {
         mView.tableView.reloadData()
+    }
+    
+    func didClickTableView(sender: UIGestureRecognizer) {
+        searchBar.resignFirstResponder()
     }
     
     func goBack(sender: UIBarButtonItem) {

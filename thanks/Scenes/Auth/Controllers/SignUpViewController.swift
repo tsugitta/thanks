@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     private let mModel = SignUpViewModel()
     private var mView: SignUpView!
@@ -18,6 +18,13 @@ class SignUpViewController: UIViewController {
         
         mView = view as! SignUpView
         mView.signUpButton.addTarget(self, action: "clickSignUpButton:", forControlEvents: .TouchUpInside)
+        
+        mView.idTextField.delegate = self
+        mView.nameTextField.delegate = self
+        mView.passwordTextField.delegate = self
+        
+        let tapGesture = UIGestureRecognizer(target: self, action: "didClickView:")
+        view.addGestureRecognizer(tapGesture)
     }
 
     func clickSignUpButton(sender: UIButton) {
@@ -45,6 +52,26 @@ class SignUpViewController: UIViewController {
             mView.idTextField.text.isNotBlank &&
             mView.nameTextField.text.isNotBlank &&
             mView.passwordTextField.text.isNotBlank
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let wrapperView = textField.superview as! SignInTextWrapperView
+        let frame = wrapperView.textLabel.frame
+        let newY: CGFloat = textField.text.isBlank ? 0 : -20
+        
+        UIView.animateWithDuration(0.2, animations: {
+            wrapperView.textLabel.frame = CGRect(x: frame.origin.x, y: newY, width: frame.width, height: frame.height)
+        })
+        return true
+    }
+    
+    func didClickView(sender: UIGestureRecognizer) {
+        view.endEditing(true)
     }
     
     func segueToTabBarViewController() {

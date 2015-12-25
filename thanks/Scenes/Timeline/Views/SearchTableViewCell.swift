@@ -15,4 +15,21 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var userThanksIdLabel: UILabel!
     @IBOutlet weak var followButton: UIButton!
 
+    func updateLabelsWithUser(user: User) {
+        userNameLabel.text = user.name
+        userThanksIdLabel.text = "@\(user.thanksId)"
+        
+        if let avatarUrl = user.avatarUrl {
+            userAvatarImageView.getCarrierWaveImageWithUrl(avatarUrl)
+        } else {
+            userAvatarImageView.image = UIImage(named: "NoImage")
+        }
+        
+        if user.isFollowing! {
+            followButton.setTitle("Unfollow", forState: .Normal)
+        } else {
+            followButton.setTitle("Follow", forState: .Normal)
+        }
+    }
+    
 }

@@ -1,21 +1,19 @@
 //
-//  MyPageTopView.swift
+//  UserPageView.swift
 //  thanks
 //
-//  Created by sdklt on 2015/12/22.
+//  Created by sdklt on 2015/12/25.
 //  Copyright © 2015年 sdklt. All rights reserved.
 //
 
 import UIKit
 
-class MyPageTopView: UIView {
+class UserPageTopView: UIView {
 
     @IBOutlet weak var tableView: UITableView!
-    
+
     override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        tableView.registerNib(UINib(nibName: "MyPageHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "MyPageHeaderTableViewCell")
+        tableView.registerNib(UINib(nibName: "UserPageHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "UserPageHeaderTableViewCell")
         tableView.registerNib(UINib(nibName: "ThanksTableViewCell", bundle: nil), forCellReuseIdentifier: "ThanksTableViewCell")
         layoutTableView()
     }
@@ -24,5 +22,5 @@ class MyPageTopView: UIView {
         tableView.estimatedRowHeight = 90
         tableView.rowHeight = UITableViewAutomaticDimension
     }
-
+    
 }

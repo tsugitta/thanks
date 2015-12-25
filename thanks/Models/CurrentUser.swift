@@ -30,7 +30,7 @@ class CurrentUser {
             }
             
             let json = JSON(response.result.value!)
-            let user = User(jsonWithTweets: json)
+            let user = User(jsonWithThanks: json)
             self.user = user
         }
     }
@@ -63,7 +63,7 @@ class CurrentUser {
                     }
                     
                     let json = JSON(response.result.value!)
-                    let user = User(jsonWithTweets: json)
+                    let user = User(jsonWithThanks: json)
                     self.user = user
                     completion()
                 }

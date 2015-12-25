@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
 //        if you wanna logout
-//        let defaults = NSUserDefaults.standardUserDefaults()
-//        defaults.removeObjectForKey("AuthToken")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.removeObjectForKey("AuthToken")
         
         let auth = Auth.sharedInstance
         if auth.alreadyHasToken() {
@@ -29,9 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIFont.standardize()
         
-        // I wanted to change the bgcolor of the textfield which is in the UISearchBar, but it didn't work.
-        UITextField.appearanceWhenContainedInInstancesOfClasses([UISearchBar.self]).backgroundColor = UIColor.veryLightGrayColor()
-
         return true
     }
 

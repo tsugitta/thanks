@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineTopViewController: UIViewController, PostViewControllerDelegate, UITableViewDelegate {
+class TimelineTopViewController: UIViewController, UITableViewDelegate, PostViewControllerDelegate, TimelineTopViewModelDelegate {
 
     private let mModel = TimelineTopViewModel()
     private var mView: TimelineTopView!
@@ -20,6 +20,7 @@ class TimelineTopViewController: UIViewController, PostViewControllerDelegate, U
             self.mView.tableView.reloadData()
         })
 
+        mModel.delegate = self
         mView = view as! TimelineTopView
         mView.tableView.dataSource = mModel
         mView.tableView.delegate = self
@@ -61,6 +62,15 @@ class TimelineTopViewController: UIViewController, PostViewControllerDelegate, U
             self.mView.tableView.reloadData()
             sender.endRefreshing()
         })
+    }
+    
+    func timelineTopViewModel(timelineTopViewModel: TimelineTopViewModel, didClickAvatarOfUser user: User) {
+        UserManager.sharedInstance.showingUser = user
+
+        let storyboard = UIStoryboard(name: "UserPage", bundle: nil)
+        let navigationVC = storyboard.instantiateInitialViewController() as! NavigationController
+        let userVC = navigationVC.viewControllers.first as! UserPageTopViewController
+        navigationController?.pushViewController(userVC, animated: true)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

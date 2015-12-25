@@ -16,6 +16,7 @@ class UserManager {
     
     var users = [User]()
     var searchedUsers = [User]()
+    var showingUser: User!
     
     func createUsersFromJson(json: JSON) -> [User] {
         var users = [User]()
@@ -50,6 +51,25 @@ class UserManager {
             }
             
             self.searchedUsers = newUsers
+            completion()
+        }
+    }
+
+    func fetchUserWithUserId(id: Int, completion: () -> Void) {
+        Alamofire.request(
+            .GET,
+            "\(Settings.ApiRootPath)/api/users/\(id)",
+            headers: ["AuthToken": Auth.sharedInstance.authToken!]
+        ).responseJSON { response in
+            guard response.result.error == nil else {
+                // Add error handling in the future
+                print("Can't connect to the server: \(response.result.error!)")
+                return
+            }
+            
+            let json = JSON(response.result.value!)
+            self.showingUser = User(jsonWithThanks: json)
+            print("showing \(self.showingUser.isFollowing)")
             completion()
         }
     }

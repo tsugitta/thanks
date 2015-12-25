@@ -10,7 +10,6 @@ import UIKit
 
 protocol SearchViewModelDelegate: class {
 
-//    func searchViewModelDidClickUserFollowButton(searchViewModel: SearchViewModel)
     func searchViewModelDidUpdateFollowingStatus(searchViewModel: SearchViewModel)
     
 }
@@ -34,25 +33,10 @@ class SearchViewModel: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("SearchTableViewCell", forIndexPath: indexPath) as! SearchTableViewCell
         let user = userManager.searchedUsers[indexPath.row]
         
-        cell.userNameLabel.text = user.name
-        cell.userThanksIdLabel.text = "@\(user.thanksId)"
-        
-        if let avatarUrl = user.avatarUrl {
-            cell.userAvatarImageView.getCarrierWaveImageWithUrl(avatarUrl)
-        } else {
-            cell.userAvatarImageView.image = UIImage(named: "NoImage")
-        }
-
-        if user.isFollowing! {
-            cell.followButton.setTitle("Unfollow", forState: .Normal)
-        } else {
-            cell.followButton.setTitle("Follow", forState: .Normal)
-        }
-        
+        cell.updateLabelsWithUser(user)
         cell.followButton.tag = indexPath.row
         cell.followButton.addTarget(self, action: "didClickFollowButton:", forControlEvents: .TouchUpInside)
-        
-        
+
         return cell
     }
 
@@ -81,4 +65,5 @@ class SearchViewModel: NSObject, UITableViewDataSource {
             userManager.searchUsersWithKeyword(keyword, completion: completion)
         }
     }
+    
 }

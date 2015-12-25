@@ -96,7 +96,7 @@ class Auth {
             }
             
             let json = JSON(response.result.value!)
-            let user = User(jsonWithTweets: json)
+            let user = User(jsonWithThanks: json)
             self.currentUser.user = user
         }
     }
