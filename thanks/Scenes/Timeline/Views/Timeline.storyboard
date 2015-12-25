@@ -59,55 +59,98 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to what" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWi-o0-NyI">
-                                <rect key="frame" x="26" y="145" width="323" height="21"/>
+                                <rect key="frame" x="26" y="205" width="323" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Sh-e8-ffD">
-                                <rect key="frame" x="26" y="105" width="323" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2nj-gz-Xce">
-                                <rect key="frame" x="26" y="176" width="323" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsF-W7-9BL">
-                                <rect key="frame" x="26" y="216" width="323" height="30"/>
-                                <color key="backgroundColor" red="0.34805813349999998" green="0.66534592199999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsF-W7-9BL" customClass="GrayButton" customModule="thanks" customModuleProvider="target">
+                                <rect key="frame" x="26" y="306" width="323" height="30"/>
+                                <state key="normal" title="post">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to whom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzN-UB-xNk">
                                 <rect key="frame" x="26" y="74" width="323" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIL-gg-Sb8" customClass="TextFieldContainerWithBorderBottom" customModule="thanks" customModuleProvider="target">
+                                <rect key="frame" x="26" y="105" width="323" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Sh-e8-ffD" customClass="NonBorderTextField" customModule="thanks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9Sh-e8-ffD" secondAttribute="bottom" id="IHi-v4-nl3"/>
+                                    <constraint firstItem="9Sh-e8-ffD" firstAttribute="top" secondItem="BIL-gg-Sb8" secondAttribute="top" id="Kv5-RO-Xhi"/>
+                                    <constraint firstAttribute="height" constant="40" id="VLM-Bs-Zoc"/>
+                                    <constraint firstItem="9Sh-e8-ffD" firstAttribute="leading" secondItem="BIL-gg-Sb8" secondAttribute="leading" id="d5d-JJ-OQ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Sh-e8-ffD" secondAttribute="trailing" id="s6v-ey-o6K"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6l-U8-eUJ" customClass="TextFieldContainerWithBorderBottom" customModule="thanks" customModuleProvider="target">
+                                <rect key="frame" x="26" y="236" width="323" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCV-0C-e0X" customClass="NonBorderTextField" customModule="thanks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jCV-0C-e0X" secondAttribute="trailing" id="M0B-uE-Yds"/>
+                                    <constraint firstItem="jCV-0C-e0X" firstAttribute="top" secondItem="U6l-U8-eUJ" secondAttribute="top" id="RdK-Qv-qzj"/>
+                                    <constraint firstAttribute="height" constant="50" id="Sj6-zV-4Mu"/>
+                                    <constraint firstAttribute="bottom" secondItem="jCV-0C-e0X" secondAttribute="bottom" id="Xth-Bm-E5g"/>
+                                    <constraint firstItem="jCV-0C-e0X" firstAttribute="leading" secondItem="U6l-U8-eUJ" secondAttribute="leading" id="iiy-6c-TtJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2nj-gz-Xce" firstAttribute="leading" secondItem="gEc-Ga-teR" secondAttribute="leadingMargin" constant="10" id="3xN-9W-L6D"/>
-                            <constraint firstItem="aWi-o0-NyI" firstAttribute="top" secondItem="9Sh-e8-ffD" secondAttribute="bottom" constant="10" id="DOw-oT-8Cs"/>
-                            <constraint firstItem="2nj-gz-Xce" firstAttribute="top" secondItem="aWi-o0-NyI" secondAttribute="bottom" constant="10" id="Kfn-AE-L5t"/>
+                            <constraint firstItem="BIL-gg-Sb8" firstAttribute="top" secondItem="JzN-UB-xNk" secondAttribute="bottom" constant="10" id="Bje-ZR-aze"/>
+                            <constraint firstItem="BIL-gg-Sb8" firstAttribute="leading" secondItem="gEc-Ga-teR" secondAttribute="leadingMargin" constant="10" id="EL4-UI-Nn8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JzN-UB-xNk" secondAttribute="trailing" constant="10" id="MwE-kz-jgp"/>
-                            <constraint firstItem="9Sh-e8-ffD" firstAttribute="top" secondItem="JzN-UB-xNk" secondAttribute="bottom" constant="10" id="ObP-aY-yCH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Sh-e8-ffD" secondAttribute="trailing" constant="10" id="SM6-2Z-RR4"/>
+                            <constraint firstItem="KsF-W7-9BL" firstAttribute="top" secondItem="U6l-U8-eUJ" secondAttribute="bottom" constant="20" id="N2Z-AT-fXN"/>
+                            <constraint firstItem="U6l-U8-eUJ" firstAttribute="top" secondItem="aWi-o0-NyI" secondAttribute="bottom" constant="10" id="Oaq-9Y-1lv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U6l-U8-eUJ" secondAttribute="trailing" constant="10" id="Qrf-2b-S2r"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aWi-o0-NyI" secondAttribute="trailing" constant="10" id="TUU-ES-gF3"/>
-                            <constraint firstItem="KsF-W7-9BL" firstAttribute="top" secondItem="2nj-gz-Xce" secondAttribute="bottom" constant="10" id="g6G-Pt-fRQ"/>
+                            <constraint firstItem="aWi-o0-NyI" firstAttribute="top" secondItem="BIL-gg-Sb8" secondAttribute="bottom" constant="60" id="WNU-Th-dwZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BIL-gg-Sb8" secondAttribute="trailing" constant="10" id="c8K-Ef-Zsm"/>
+                            <constraint firstItem="U6l-U8-eUJ" firstAttribute="leading" secondItem="gEc-Ga-teR" secondAttribute="leadingMargin" constant="10" id="eRr-9E-B3e"/>
                             <constraint firstItem="JzN-UB-xNk" firstAttribute="top" secondItem="lGY-bt-cKg" secondAttribute="bottom" constant="10" id="gbc-4x-NuI"/>
                             <constraint firstItem="KsF-W7-9BL" firstAttribute="leading" secondItem="gEc-Ga-teR" secondAttribute="leadingMargin" constant="10" id="gkB-T7-gF5"/>
                             <constraint firstItem="JzN-UB-xNk" firstAttribute="leading" secondItem="gEc-Ga-teR" secondAttribute="leadingMargin" constant="10" id="htS-vf-TcF"/>
+                            <constraint firstItem="KsF-W7-9BL" firstAttribute="top" secondItem="U6l-U8-eUJ" secondAttribute="bottom" constant="40" id="il1-KK-pLU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KsF-W7-9BL" secondAttribute="trailing" constant="10" id="psQ-G2-Io1"/>
-                            <constraint firstItem="9Sh-e8-ffD" firstAttribute="leading" secondItem="gEc-Ga-teR" secondAttribute="leadingMargin" constant="10" id="uJo-DP-MAS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2nj-gz-Xce" secondAttribute="trailing" constant="10" id="yn7-Oh-2dD"/>
                             <constraint firstItem="aWi-o0-NyI" firstAttribute="leading" secondItem="gEc-Ga-teR" secondAttribute="leadingMargin" constant="10" id="zDd-3Q-hEy"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="il1-KK-pLU"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outlet property="submitButton" destination="KsF-W7-9BL" id="ysZ-jw-2KK"/>
-                            <outlet property="toWhatTextField" destination="2nj-gz-Xce" id="OaO-g9-ci8"/>
-                            <outlet property="toWhomTextField" destination="9Sh-e8-ffD" id="We8-p3-JC1"/>
+                            <outlet property="toWhatTextField" destination="jCV-0C-e0X" id="1VY-6P-Wv4"/>
+                            <outlet property="toWhomTextField" destination="9Sh-e8-ffD" id="ILq-NE-lG9"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Post" id="JCL-BM-V6l"/>

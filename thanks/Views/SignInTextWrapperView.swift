@@ -14,15 +14,15 @@ class SignInTextWrapperView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        addSubview(textLabel)
+//        addSubview(textLabel)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        let frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        textLabel.frame = frame
-        textLabel.font = UIFont(name: UIFont.standardFontName(), size: 15)
-    }
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        let frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+//        textLabel.frame = frame
+//        textLabel.font = UIFont(name: UIFont.standardFontName(), size: 15)
+//    }
     
     @IBInspectable var trigger: Bool = true {
         didSet {

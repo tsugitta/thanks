@@ -15,13 +15,13 @@ class SignUpView: UIView {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     
-//    override func awakeFromNib() {
-//        idTextField.keyboardType = .ASCIICapable
-//        passwordTextField.secureTextEntry = true
-//        
+    override func awakeFromNib() {
+        idTextField.keyboardType = .ASCIICapable
+        passwordTextField.secureTextEntry = true
+        
 //        let idTextFieldWrapperView = idTextField.superview as! SignInTextWrapperView
 //        let nameTextFieldWrapperView = nameTextField.superview as! SignInTextWrapperView
 //        let passwordTextFieldWrapperView = passwordTextField.superview as! SignInTextWrapperView
-//    }
+    }
     
 }
