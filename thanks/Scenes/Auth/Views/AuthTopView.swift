@@ -17,4 +17,5 @@ class AuthTopView: UIView {
     override func awakeFromNib() {
         titleLabel.font = UIFont(name: "Avenir-Heavy", size: 17)
     }
+
 }
