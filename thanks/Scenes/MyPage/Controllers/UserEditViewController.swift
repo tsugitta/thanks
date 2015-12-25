@@ -9,8 +9,9 @@
 import UIKit
 
 protocol UserEditViewControllerDelegate: class {
-    func userEditViewControllerDidClickUploadButton(userEditViewController: UserEditViewController)
+
     func userEditViewControllerDidUpload(userEditViewController: UserEditViewController)
+
 }
 
 class UserEditViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {

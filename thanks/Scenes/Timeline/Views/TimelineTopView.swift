@@ -10,12 +10,17 @@ import UIKit
 
 class TimelineTopView: UIView {
 
+    var refreshControl: UIRefreshControl!
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func awakeFromNib() {
         tableView.registerNib(UINib(nibName: "ThanksTableViewCell", bundle: nil), forCellReuseIdentifier: "ThanksTableViewCell")
     
         layoutTableView()
+        
+        refreshControl = UIRefreshControl()
+        tableView.addSubview(refreshControl)
     }
     
     func layoutTableView() {

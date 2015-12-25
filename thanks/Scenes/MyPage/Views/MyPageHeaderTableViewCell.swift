@@ -27,6 +27,18 @@ class MyPageHeaderTableViewCell: UITableViewCell {
         userAvatarImageView.clipsToBounds = true
     }
     
+    func updateLabelsWithUser(user: User) {
+        userNameLabel.text = user.name
+        userProfileLabel.text = user.profile
+        userEditButton.addTarget(self, action: "didClickUserEditButton", forControlEvents: .TouchUpInside)
+
+        if let avatarUrl = user.avatarUrl {
+            userAvatarImageView.getCarrierWaveImageWithUrl(avatarUrl)
+        } else {
+            userAvatarImageView.image = UIImage(named: "NoImage")
+        }
+    }
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

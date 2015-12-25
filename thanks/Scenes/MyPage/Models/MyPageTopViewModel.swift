@@ -45,25 +45,14 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCellWithIdentifier("MyPageHeaderTableViewCell") as! MyPageHeaderTableViewCell
-            
-            if let avatarUrl = user.avatarUrl {
-                cell.userAvatarImageView.getCarrierWaveImageWithUrl(avatarUrl)
-            } else {
-                cell.userAvatarImageView.image = UIImage(named: "NoImage")
-            }
-            
-            cell.userNameLabel.text = user.name
-            cell.userProfileLabel.text = user.profile
-            cell.userEditButton.addTarget(self, action: "didClickUserEditButton", forControlEvents: .TouchUpInside)
-            
+            cell.updateLabelsWithUser(user)
             return cell
             
         case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("ThanksTableViewCell", forIndexPath: indexPath) as! ThanksTableViewCell
-            
             let thank = user.thanks[indexPath.row]
+            thank.user = user
             cell.updateLabelsWithThank(thank)
-            
             return cell
             
         default:

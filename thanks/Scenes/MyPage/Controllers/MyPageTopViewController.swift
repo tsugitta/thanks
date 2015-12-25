@@ -50,7 +50,4 @@ class MyPageTopViewController: UIViewController, UITableViewDelegate, MyPageTopV
         mView.tableView.reloadData()
     }
     
-    func userEditViewControllerDidClickUploadButton(userEditViewController: UserEditViewController) {
-        
-    }
 }

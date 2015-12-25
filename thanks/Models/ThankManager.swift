@@ -27,9 +27,8 @@ class ThankManager {
         return thanks
     }
     
-    func updateThanksFromJson(thanksJson: JSON, completion: () -> Void) {
+    func updateThanksFromJson(thanksJson: JSON) {
         timelineThanks = createThanksFromJson(thanksJson)
-        completion()
     }
     
     func fetchThanks(completion completion: () -> Void) {
@@ -45,7 +44,8 @@ class ThankManager {
             }
 
             let json = JSON(response.result.value!)
-            self.updateThanksFromJson(json["thanks"], completion: completion)
+            self.updateThanksFromJson(json["thanks"])
+            completion()
         }
     }
     
@@ -63,8 +63,9 @@ class ThankManager {
             }
 
             let json = JSON(response.result.value!)
-            self.updateThanksFromJson(json["thanks"], completion: completion)
+            self.updateThanksFromJson(json["thanks"])
             CurrentUser.sharedInstance.user!.thanks = self.createThanksFromJson(json["user_thanks"])
+            completion()
         }
     }
     

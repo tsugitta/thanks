@@ -23,10 +23,16 @@ class TimelineTopViewController: UIViewController, PostViewControllerDelegate, U
         mView = view as! TimelineTopView
         mView.tableView.dataSource = mModel
         mView.tableView.delegate = self
+        mView.refreshControl.addTarget(self, action: "updateTableView:", forControlEvents: .ValueChanged)
         
         layoutNavigationBar()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        mView.tableView.reloadData()
+    }
+    
     func layoutNavigationBar() {
         let deleteImage = UIImage(named: "AddUser-100")?.resize(afterWidth: 22, afterHeight: 22)
         let checkImage = UIImage(named: "Edit-100")?.resize(afterWidth: 22, afterHeight: 22)
@@ -48,6 +54,13 @@ class TimelineTopViewController: UIViewController, PostViewControllerDelegate, U
     
     func postViewControllerDidPostThank(postViewController: PostViewController) {
         mView.tableView.reloadData()
+    }
+
+    func updateTableView(sender: UIRefreshControl) {
+        ThankManager.sharedInstance.fetchThanks(completion: {
+            self.mView.tableView.reloadData()
+            sender.endRefreshing()
+        })
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

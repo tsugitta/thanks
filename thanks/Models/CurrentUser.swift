@@ -108,7 +108,8 @@ class CurrentUser {
             } else {
                 target_user.isFollowing = false
             }
-            completion()
+            
+            ThankManager.sharedInstance.fetchThanks(completion: completion)
         }
     }
     
@@ -145,7 +146,8 @@ class CurrentUser {
             } else {
                 target_user.isFollowing = false
             }
-            completion()
+            
+            ThankManager.sharedInstance.fetchThanks(completion: completion)
         }
     }
     
