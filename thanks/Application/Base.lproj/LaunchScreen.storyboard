@@ -16,7 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pentagon-100.png" translatesAutoresizingMaskIntoConstraints="NO" id="jiK-5W-yg5">
+                                <rect key="frame" x="137" y="170" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="VRV-WT-cFc"/>
+                                    <constraint firstAttribute="height" constant="100" id="Yjp-sj-gyg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jiK-5W-yg5" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="150" id="P4e-8f-SpU"/>
+                            <constraint firstItem="jiK-5W-yg5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yrZ-fc-ZsR"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -25,4 +38,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pentagon-100.png" width="100" height="100"/>
+    </resources>
 </document>

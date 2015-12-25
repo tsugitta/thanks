@@ -12,5 +12,9 @@ class AuthTopView: UIView {
     
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
-
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    override func awakeFromNib() {
+        titleLabel.font = UIFont(name: "Avenir-Heavy", size: 17)
+    }
 }

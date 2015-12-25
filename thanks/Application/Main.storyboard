@@ -18,12 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-Tk-Pld">
-                                <rect key="frame" x="159" y="220" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPn-6S-7zi">
                                 <rect key="frame" x="0.0" y="556" width="375" height="60"/>
                                 <constraints>
@@ -75,6 +69,19 @@
                                     <constraint firstAttribute="height" constant="1" id="s1k-Vb-Ela"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pentagon-100.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfQ-dH-uNq">
+                                <rect key="frame" x="138" y="170" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8Ys-pl-sjz"/>
+                                    <constraint firstAttribute="width" constant="100" id="dUM-e9-6L2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-Tk-Pld">
+                                <rect key="frame" x="161" y="290" width="53" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -90,10 +97,13 @@
                             <constraint firstAttribute="trailing" secondItem="nPn-6S-7zi" secondAttribute="trailing" id="PWY-ib-IvI"/>
                             <constraint firstItem="nPn-6S-7zi" firstAttribute="leading" secondItem="B7g-Cn-6em" secondAttribute="leading" id="Tje-6c-iyW"/>
                             <constraint firstItem="I4z-Tk-Pld" firstAttribute="centerX" secondItem="B7g-Cn-6em" secondAttribute="centerX" id="XrH-Tl-kF3"/>
+                            <constraint firstItem="jfQ-dH-uNq" firstAttribute="centerX" secondItem="B7g-Cn-6em" secondAttribute="centerX" id="bJk-Ru-DzY"/>
+                            <constraint firstItem="I4z-Tk-Pld" firstAttribute="top" secondItem="jfQ-dH-uNq" secondAttribute="bottom" constant="20" id="d7I-PQ-Fgs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E68-Ev-xvy" secondAttribute="trailing" id="eng-wk-xAC"/>
                             <constraint firstAttribute="trailing" secondItem="y7U-cf-JXe" secondAttribute="trailing" id="esK-Lo-C7D"/>
                             <constraint firstItem="TES-6Y-asY" firstAttribute="top" secondItem="sjN-6d-ouX" secondAttribute="bottom" constant="50" id="g78-pf-4No"/>
                             <constraint firstItem="E68-Ev-xvy" firstAttribute="top" secondItem="y7U-cf-JXe" secondAttribute="bottom" id="ks5-EA-Y8f"/>
+                            <constraint firstItem="jfQ-dH-uNq" firstAttribute="top" secondItem="FTi-LW-nrD" secondAttribute="bottom" constant="150" id="l9R-YY-JZw"/>
                             <constraint firstItem="sjN-6d-ouX" firstAttribute="leading" secondItem="B7g-Cn-6em" secondAttribute="leading" id="nxL-wx-EEI"/>
                             <constraint firstAttribute="trailing" secondItem="ILm-AO-jBe" secondAttribute="trailing" id="pOZ-yo-ENe"/>
                             <constraint firstItem="nPn-6S-7zi" firstAttribute="top" secondItem="E68-Ev-xvy" secondAttribute="bottom" constant="20" id="sdo-1B-c5N"/>
@@ -102,6 +112,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="w0w-n6-rac"/>
                                 <exclude reference="3W7-pZ-5ps"/>
                                 <exclude reference="eng-wk-xAC"/>
                                 <exclude reference="sdo-1B-c5N"/>
@@ -111,6 +122,7 @@
                         <connections>
                             <outlet property="signInButton" destination="y7U-cf-JXe" id="Qkf-q7-98o"/>
                             <outlet property="signUpButton" destination="nPn-6S-7zi" id="I1j-Au-dlX"/>
+                            <outlet property="titleLabel" destination="I4z-Tk-Pld" id="QLc-bO-wK4"/>
                         </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -338,4 +350,7 @@
             <point key="canvasLocation" x="1302.5" y="842.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pentagon-100.png" width="100" height="100"/>
+    </resources>
 </document>
