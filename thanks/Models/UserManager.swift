@@ -69,7 +69,6 @@ class UserManager {
             
             let json = JSON(response.result.value!)
             self.showingUser = User(jsonWithThanks: json)
-            print("showing \(self.showingUser.isFollowing)")
             completion()
         }
     }

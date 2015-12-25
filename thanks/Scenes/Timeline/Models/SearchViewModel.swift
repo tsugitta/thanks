@@ -32,7 +32,8 @@ class SearchViewModel: NSObject, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SearchTableViewCell", forIndexPath: indexPath) as! SearchTableViewCell
         let user = userManager.searchedUsers[indexPath.row]
-        
+
+        cell.selectionStyle = .None
         cell.updateLabelsWithUser(user)
         cell.followButton.tag = indexPath.row
         cell.followButton.addTarget(self, action: "didClickFollowButton:", forControlEvents: .TouchUpInside)
@@ -58,12 +59,7 @@ class SearchViewModel: NSObject, UITableViewDataSource {
     }
     
     func searchUsersWithKeyword(keyword: String, completion: () -> Void) {
-        if keyword.isEmpty {
-            userManager.searchedUsers = []
-            completion()
-        } else {
-            userManager.searchUsersWithKeyword(keyword, completion: completion)
-        }
+        userManager.searchUsersWithKeyword(keyword, completion: completion)
     }
     
 }

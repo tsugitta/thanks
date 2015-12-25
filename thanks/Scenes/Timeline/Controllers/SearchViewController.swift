@@ -24,28 +24,41 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         mModel.delegate = self
 
         UserManager.sharedInstance.searchedUsers = []
-        
         layoutNavigationBar()
-        let tapGesture = UITapGestureRecognizer(target: self, action: "didClickTableView:")
-        mView.tableView.addGestureRecognizer(tapGesture)
+        initialSearch()
     }
 
+    func initialSearch() {
+        mModel.searchUsersWithKeyword("", completion: {
+            self.mView.tableView.reloadData()
+        })
+    }
+    
     func layoutNavigationBar() {
-        searchBar = UISearchBar()
+        searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
         searchBar.delegate = self
+//        searchBar.becomeFirstResponder()
+        searchBar.placeholder = "ID or NAME"
+        
+        let searchTextField = searchBar.valueForKey("searchField") as! UITextField
+        searchTextField.backgroundColor = UIColor.veryLightGrayColor()
         navigationItem.titleView = searchBar
         
         let backImage = UIImage(named: "Back-100")?.resize(afterWidth: 22, afterHeight: 22)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImage, style: .Plain, target: self, action: "goBack:")
         // cannot change the image of navigationItem.backButtonItem, therefore   inevitably use leftBarButtonItem
-
     }
+    
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         let keyword = searchBar.text
         mModel.searchUsersWithKeyword(keyword!, completion: {
             self.mView.tableView.reloadData()
         })
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
