@@ -26,7 +26,7 @@ class Auth {
         self.password = dictionary["password"]!
     }
     
-    func signUp() {
+    func signUp(completion completion: () -> Void) {
         let params = [
             "user": [
                 "thanks_id": self.thanksId!,
@@ -55,10 +55,12 @@ class Auth {
                 let user = User(jsonWithOnlyUser: json["user"])
                 self.currentUser.user = user
                 self.saveAuthToken(json["auth_token"].string!)
+                completion()
         }
     }
     
     func saveAuthToken(token: String) {
+        authToken = token
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(token, forKey: "AuthToken")
         defaults.synchronize()

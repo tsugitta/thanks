@@ -35,7 +35,7 @@ class SearchViewModel: NSObject, UITableViewDataSource {
         let user = userManager.searchedUsers[indexPath.row]
         
         cell.userNameLabel.text = user.name
-        cell.userThanksIdLabel.text = user.thanksId
+        cell.userThanksIdLabel.text = "@\(user.thanksId)"
         
         if let avatarUrl = user.avatarUrl {
             cell.userAvatarImageView.getCarrierWaveImageWithUrl(avatarUrl)

@@ -13,7 +13,11 @@ class SignUpView: UIView {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmationTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    
+    override func awakeFromNib() {
+        idTextField.keyboardType = .ASCIICapable
+        passwordTextField.secureTextEntry = true
+    }
     
 }

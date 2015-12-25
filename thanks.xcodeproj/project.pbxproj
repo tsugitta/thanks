@@ -36,8 +36,6 @@
 		DF0B02171C24E02600308E55 /* TimelineTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B02031C24E02600308E55 /* TimelineTopViewController.swift */; };
 		DF0B02181C24E02600308E55 /* TimelineTopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B02051C24E02600308E55 /* TimelineTopViewModel.swift */; };
 		DF0B02191C24E02600308E55 /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0B02071C24E02600308E55 /* Timeline.storyboard */; };
-		DF0B021A1C24E02600308E55 /* TimelineThanksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B02081C24E02600308E55 /* TimelineThanksTableViewCell.swift */; };
-		DF0B021B1C24E02600308E55 /* TimelineThanksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0B02091C24E02600308E55 /* TimelineThanksTableViewCell.xib */; };
 		DF0B021C1C24E02600308E55 /* TimelineTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0B020A1C24E02600308E55 /* TimelineTopView.swift */; };
 		DF3C89ED1C2BB5A90086A72F /* AddUser-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3C89EC1C2BB5A90086A72F /* AddUser-100.png */; };
 		DF3C89EF1C2BEEF20086A72F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C89EE1C2BEEF20086A72F /* SearchViewController.swift */; };
@@ -55,8 +53,6 @@
 		DFB6165D1C28836700DDB58B /* MyPageTopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6165C1C28836700DDB58B /* MyPageTopViewModel.swift */; };
 		DFB6166C1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6166A1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.swift */; };
 		DFB6166D1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFB6166B1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.xib */; };
-		DFB616701C2A7BDF00DDB58B /* MyPageThanksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6166E1C2A7BDF00DDB58B /* MyPageThanksTableViewCell.swift */; };
-		DFB616711C2A7BDF00DDB58B /* MyPageThanksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFB6166F1C2A7BDF00DDB58B /* MyPageThanksTableViewCell.xib */; };
 		DFB616731C2A95CF00DDB58B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616721C2A95CF00DDB58B /* TabBar.swift */; };
 		DFB616751C2A9CDF00DDB58B /* UserEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616741C2A9CDF00DDB58B /* UserEditViewController.swift */; };
 		DFB616771C2A9D8900DDB58B /* UserEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB616761C2A9D8900DDB58B /* UserEditView.swift */; };
@@ -140,8 +136,6 @@
 		DF0B02031C24E02600308E55 /* TimelineTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTopViewController.swift; sourceTree = "<group>"; };
 		DF0B02051C24E02600308E55 /* TimelineTopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTopViewModel.swift; sourceTree = "<group>"; };
 		DF0B02071C24E02600308E55 /* Timeline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
-		DF0B02081C24E02600308E55 /* TimelineThanksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineThanksTableViewCell.swift; sourceTree = "<group>"; };
-		DF0B02091C24E02600308E55 /* TimelineThanksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineThanksTableViewCell.xib; sourceTree = "<group>"; };
 		DF0B020A1C24E02600308E55 /* TimelineTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTopView.swift; sourceTree = "<group>"; };
 		DF3C89EC1C2BB5A90086A72F /* AddUser-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddUser-100.png"; sourceTree = "<group>"; };
 		DF3C89EE1C2BEEF20086A72F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -159,8 +153,6 @@
 		DFB6165C1C28836700DDB58B /* MyPageTopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTopViewModel.swift; sourceTree = "<group>"; };
 		DFB6166A1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		DFB6166B1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPageHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		DFB6166E1C2A7BDF00DDB58B /* MyPageThanksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageThanksTableViewCell.swift; sourceTree = "<group>"; };
-		DFB6166F1C2A7BDF00DDB58B /* MyPageThanksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPageThanksTableViewCell.xib; sourceTree = "<group>"; };
 		DFB616721C2A95CF00DDB58B /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		DFB616741C2A9CDF00DDB58B /* UserEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEditViewController.swift; sourceTree = "<group>"; };
 		DFB616761C2A9D8900DDB58B /* UserEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEditView.swift; sourceTree = "<group>"; };
@@ -434,8 +426,6 @@
 				DF3C89F71C2C30390086A72F /* SearchTableViewCell.xib */,
 				DF3C89F01C2BEF1B0086A72F /* SearchView.swift */,
 				DF0B02071C24E02600308E55 /* Timeline.storyboard */,
-				DF0B02081C24E02600308E55 /* TimelineThanksTableViewCell.swift */,
-				DF0B02091C24E02600308E55 /* TimelineThanksTableViewCell.xib */,
 				DF0B020A1C24E02600308E55 /* TimelineTopView.swift */,
 			);
 			path = Views;
@@ -488,8 +478,6 @@
 				DF0B01FE1C24E02600308E55 /* MyPage.storyboard */,
 				DFB6166A1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.swift */,
 				DFB6166B1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.xib */,
-				DFB6166E1C2A7BDF00DDB58B /* MyPageThanksTableViewCell.swift */,
-				DFB6166F1C2A7BDF00DDB58B /* MyPageThanksTableViewCell.xib */,
 				DFB6165A1C28835C00DDB58B /* MyPageTopView.swift */,
 				DFB616761C2A9D8900DDB58B /* UserEditView.swift */,
 			);
@@ -629,8 +617,6 @@
 				DFB616801C2AAFAA00DDB58B /* Checkmark-100.png in Resources */,
 				DFB616981C2B2EA000DDB58B /* Back-25.png in Resources */,
 				DF0B01DA1C24E01400308E55 /* Assets.xcassets in Resources */,
-				DF0B021B1C24E02600308E55 /* TimelineThanksTableViewCell.xib in Resources */,
-				DFB616711C2A7BDF00DDB58B /* MyPageThanksTableViewCell.xib in Resources */,
 				DFB616871C2AB4F200DDB58B /* Checkmark-25.png in Resources */,
 				DF0B02151C24E02600308E55 /* MyPage.storyboard in Resources */,
 				DFB6166D1C2A7BD100DDB58B /* MyPageHeaderTableViewCell.xib in Resources */,
@@ -740,7 +726,6 @@
 				DF0B01EC1C24E02200308E55 /* ThankManager.swift in Sources */,
 				DFB6169A1C2B4AB900DDB58B /* GrayButton.swift in Sources */,
 				DFC769DD1C2C38AF00ECAD0F /* UserManager.swift in Sources */,
-				DF0B021A1C24E02600308E55 /* TimelineThanksTableViewCell.swift in Sources */,
 				DF0B01E01C24E01D00308E55 /* Optional+Extension.swift in Sources */,
 				DF0B02181C24E02600308E55 /* TimelineTopViewModel.swift in Sources */,
 				DFB6168D1C2ABD7600DDB58B /* AvatarButton.swift in Sources */,
@@ -750,7 +735,6 @@
 				DF0B020B1C24E02600308E55 /* AuthTopViewController.swift in Sources */,
 				DF0B02121C24E02600308E55 /* AuthTopView.swift in Sources */,
 				DF3C89EF1C2BEEF20086A72F /* SearchViewController.swift in Sources */,
-				DFB616701C2A7BDF00DDB58B /* MyPageThanksTableViewCell.swift in Sources */,
 				DF0B01EB1C24E02200308E55 /* Thank.swift in Sources */,
 				DFB6165D1C28836700DDB58B /* MyPageTopViewModel.swift in Sources */,
 				DFB6167D1C2AA90B00DDB58B /* TextFieldContainerWithBorderBottom.swift in Sources */,

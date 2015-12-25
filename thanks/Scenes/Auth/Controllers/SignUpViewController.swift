@@ -35,20 +35,20 @@ class SignUpViewController: UIViewController {
 
         let auth = Auth.sharedInstance
         auth.updateProperties(input)
-        auth.signUp()
-        segueToTabBarViewController()
+        auth.signUp(completion: {
+            self.segueToTabBarViewController()
+        })
     }
     
     func inputsAreValid() -> Bool {
         return
             mView.idTextField.text.isNotBlank &&
             mView.nameTextField.text.isNotBlank &&
-            mView.passwordTextField.text.isNotBlank &&
-            mView.passwordTextField.text == mView.confirmationTextField.text
+            mView.passwordTextField.text.isNotBlank
     }
     
     func segueToTabBarViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
         let vc = storyboard.instantiateInitialViewController()!
         vc.modalTransitionStyle = .CrossDissolve
         presentViewController(vc, animated: true, completion: nil)

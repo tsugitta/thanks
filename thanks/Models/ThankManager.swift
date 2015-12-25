@@ -14,15 +14,21 @@ class ThankManager {
 
     static let sharedInstance = ThankManager()
     
-    var thanks = [Thank]()
+    var timelineThanks = [Thank]()
+    
+    func createThanksFromJson(json: JSON) -> [Thank] {
+        var thanks = [Thank]()
+        
+        for (_, thankJson) in json {
+            let thank = Thank(json: thankJson)
+            thanks.append(thank)
+        }
+        
+        return thanks
+    }
     
     func updateThanksFromJson(thanksJson: JSON, completion: () -> Void) {
-        var newThanks = [Thank]()
-        for (_, thankJson) in thanksJson {
-            let thank = Thank(json: thankJson)
-            newThanks.append(thank)
-        }
-        thanks = newThanks
+        timelineThanks = createThanksFromJson(thanksJson)
         completion()
     }
     
@@ -39,7 +45,7 @@ class ThankManager {
             }
 
             let json = JSON(response.result.value!)
-            self.updateThanksFromJson(json, completion: completion)
+            self.updateThanksFromJson(json["thanks"], completion: completion)
         }
     }
     
@@ -57,7 +63,8 @@ class ThankManager {
             }
 
             let json = JSON(response.result.value!)
-            self.updateThanksFromJson(json, completion: completion)
+            self.updateThanksFromJson(json["thanks"], completion: completion)
+            CurrentUser.sharedInstance.user!.thanks = self.createThanksFromJson(json["user_thanks"])
         }
     }
     

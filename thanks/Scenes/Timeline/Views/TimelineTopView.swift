@@ -13,7 +13,7 @@ class TimelineTopView: UIView {
     @IBOutlet weak var tableView: UITableView!
     
     override func awakeFromNib() {
-        tableView.registerNib(UINib(nibName: "TimelineThanksTableViewCell", bundle: nil), forCellReuseIdentifier: "TimelineThanksTableViewCell")
+        tableView.registerNib(UINib(nibName: "ThanksTableViewCell", bundle: nil), forCellReuseIdentifier: "ThanksTableViewCell")
     
         layoutTableView()
     }

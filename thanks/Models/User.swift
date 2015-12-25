@@ -17,7 +17,7 @@ class User {
     var profile: String!
     var avatarUrl: String?
     var isFollowing: Bool?
-    var thanks: [Thank]?
+    var thanks = [Thank]()
     
     init(jsonWithOnlyUser json: JSON) {
         self.id = json["id"].int

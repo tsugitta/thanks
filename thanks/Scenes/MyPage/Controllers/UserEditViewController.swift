@@ -13,7 +13,7 @@ protocol UserEditViewControllerDelegate: class {
     func userEditViewControllerDidUpload(userEditViewController: UserEditViewController)
 }
 
-class UserEditViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class UserEditViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
 
     private let mModel = UserEditViewModel()
     private var mView: UserEditView!
@@ -27,12 +27,19 @@ class UserEditViewController: UIViewController, UINavigationControllerDelegate, 
         mView = view as! UserEditView
         
         addEventListener()
+        setDelegates()
         layoutNavigationBar()
         setImagePicker()
     }
 
     func addEventListener() {
         mView.userAvatarButton.addTarget(self, action: "clickUserAvatarButton:", forControlEvents: .TouchUpInside)
+    }
+    
+    func setDelegates() {
+        mView.thanksIdTextField.delegate = self
+        mView.displayedNameTextField.delegate = self
+        mView.profileTextField.delegate = self
     }
     
     func layoutNavigationBar() {
@@ -121,6 +128,11 @@ class UserEditViewController: UIViewController, UINavigationControllerDelegate, 
         }
         
         imagePickerVC.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

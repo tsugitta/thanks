@@ -22,12 +22,12 @@ class MyPageTopView: UIView {
         super.awakeFromNib()
         
         tableView.registerNib(UINib(nibName: "MyPageHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "MyPageHeaderTableViewCell")
-        tableView.registerNib(UINib(nibName: "MyPageThanksTableViewCell", bundle: nil), forCellReuseIdentifier: "MyPageThanksTableViewCell")
+        tableView.registerNib(UINib(nibName: "ThanksTableViewCell", bundle: nil), forCellReuseIdentifier: "ThanksTableViewCell")
         layoutTableView()
     }
     
     func layoutTableView() {
-        tableView.estimatedRowHeight = 20
+        tableView.estimatedRowHeight = 90
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 

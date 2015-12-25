@@ -17,6 +17,17 @@ class UserManager {
     var users = [User]()
     var searchedUsers = [User]()
     
+    func createUsersFromJson(json: JSON) -> [User] {
+        var users = [User]()
+    
+        for (_, userJson) in json {
+            let user = User(jsonWithOnlyUser: userJson)
+            users.append(user)
+        }
+        
+        return users
+    }
+    
     func searchUsersWithKeyword(keyword: String, completion: () -> Void) {
         Alamofire.request(
             .GET,

@@ -31,7 +31,7 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
             return 1
             
         case 1:
-            return user.thanks!.count
+            return user.thanks.count
             
         default:
             return 0
@@ -59,19 +59,10 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
             return cell
             
         case 1:
-            let cell = tableView.dequeueReusableCellWithIdentifier("MyPageThanksTableViewCell", forIndexPath: indexPath) as! MyPageThanksTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("ThanksTableViewCell", forIndexPath: indexPath) as! ThanksTableViewCell
             
-            let thank = user.thanks![indexPath.row]
-            
-            if let avatarUrl = user.avatarUrl {
-                cell.userImageView.getCarrierWaveImageWithUrl(avatarUrl)
-            } else {
-                cell.userImageView.image = UIImage(named: "NoImage")
-            }
-
-            cell.userNameLabel.text = user.name
-            cell.toWhatLabel.text = thank.toWhat
-            cell.toWhomLabel.text = thank.toWhom
+            let thank = user.thanks[indexPath.row]
+            cell.updateLabelsWithThank(thank)
             
             return cell
             
@@ -87,29 +78,14 @@ class MyPageTopViewModel: NSObject, UITableViewDataSource {
             return 350
             
         case 1:
-            return 80
+            return UITableViewAutomaticDimension
             
         default:
             return 0
             
         }
     }
-    
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
-            return 200
-            
-        case 1:
-            return 90
-            
-        default:
-            return 0
-            
-        }
-    }
-    
-    
+        
     func didClickUserEditButton() {
         delegate?.myPageTopViewModelDidTapUserEditButton(self)
     }

@@ -15,8 +15,8 @@ extension UIFont {
     }
     
     class func standardize() {
-        UILabel.appearance().font = UIFont(name: standardFontName(), size: 15)
-        UITextField.appearance().font = UIFont(name: standardFontName(), size: 15)
+        UILabel.appearance().font = UIFont(name: standardFontName(), size: 14)
+        UITextField.appearance().font = UIFont(name: standardFontName(), size: 14)
     }
     
 }

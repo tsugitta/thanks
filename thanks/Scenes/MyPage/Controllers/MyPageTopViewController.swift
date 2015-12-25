@@ -35,10 +35,6 @@ class MyPageTopViewController: UIViewController, UITableViewDelegate, MyPageTopV
         return mModel.tableView(tableView, heightForRowAtIndexPath: indexPath)
     }
     
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return mModel.tableView(tableView, estimatedHeightForRowAtIndexPath: indexPath)
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier! {
         case "FromMyPageTopToUserEdit":

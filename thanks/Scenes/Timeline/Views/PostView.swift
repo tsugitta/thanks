@@ -14,8 +14,4 @@ class PostView: UIView {
     @IBOutlet weak var toWhatTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
-    override func awakeFromNib() {
-        
-    }
-
 }

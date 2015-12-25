@@ -15,12 +15,4 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var userThanksIdLabel: UILabel!
     @IBOutlet weak var followButton: UIButton!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
 }
