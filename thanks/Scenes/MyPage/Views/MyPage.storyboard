@@ -223,12 +223,23 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9O-62-zqu" customClass="GrayButton" customModule="thanks" customModuleProvider="target">
+                                <rect key="frame" x="16" y="587" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="D3F-Th-e7a"/>
+                                </constraints>
+                                <state key="normal" title="SIGN OUT"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="D3y-So-Dzq" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="5iR-2R-NH5"/>
                             <constraint firstItem="RJS-UX-3cl" firstAttribute="top" secondItem="y9i-hR-Dw9" secondAttribute="bottom" constant="10" id="8AH-pu-bNd"/>
                             <constraint firstItem="D3y-So-Dzq" firstAttribute="top" secondItem="iQb-yg-uId" secondAttribute="bottom" constant="39" id="8WV-ky-fYZ"/>
+                            <constraint firstItem="Y9O-62-zqu" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="CJt-5n-nXc"/>
                             <constraint firstItem="yW8-NG-QRb" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="FKg-LG-vSO"/>
                             <constraint firstItem="y9i-hR-Dw9" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="H0L-jW-6ey"/>
                             <constraint firstItem="mNB-07-YkJ" firstAttribute="top" secondItem="tfz-In-SC9" secondAttribute="bottom" constant="30" id="I4S-qT-HtB"/>
@@ -239,11 +250,13 @@
                             <constraint firstItem="iQb-yg-uId" firstAttribute="top" secondItem="Owz-Ie-LhW" secondAttribute="bottom" constant="34" id="SLp-sh-i2F"/>
                             <constraint firstAttribute="trailing" secondItem="Owz-Ie-LhW" secondAttribute="trailing" id="TTG-0z-Dhx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yW8-NG-QRb" secondAttribute="trailing" id="UwH-6x-apV"/>
+                            <constraint firstItem="Y9O-62-zqu" firstAttribute="top" secondItem="mNB-07-YkJ" secondAttribute="bottom" constant="50" id="Wgi-Ui-jZC"/>
                             <constraint firstItem="Owz-Ie-LhW" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leading" id="ZQ9-I9-3Sm"/>
                             <constraint firstItem="M2E-pV-to0" firstAttribute="top" secondItem="IGm-Pb-MM0" secondAttribute="bottom" constant="30" id="Zwk-e4-r4Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mNB-07-YkJ" secondAttribute="trailing" id="aTx-kt-zBj"/>
                             <constraint firstAttribute="trailing" secondItem="Owz-Ie-LhW" secondAttribute="trailing" id="aWl-38-Sf9"/>
                             <constraint firstItem="Lsa-5G-mob" firstAttribute="top" secondItem="IGm-Pb-MM0" secondAttribute="bottom" constant="30" id="bH3-Lu-VG3"/>
+                            <constraint firstItem="n3k-sP-wVR" firstAttribute="top" secondItem="Y9O-62-zqu" secondAttribute="bottom" constant="50" id="cii-Ou-kTC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M2E-pV-to0" secondAttribute="trailing" id="eRs-Vf-uRw"/>
                             <constraint firstItem="Yr6-yH-szJ" firstAttribute="top" secondItem="Lsa-5G-mob" secondAttribute="bottom" constant="10" id="fDN-HA-Gam"/>
                             <constraint firstItem="RJS-UX-3cl" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="fJq-aE-lRI"/>
@@ -251,6 +264,7 @@
                             <constraint firstItem="vQz-gj-Aev" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="gem-kB-RTv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tfz-In-SC9" secondAttribute="trailing" id="nvq-kG-eFb"/>
                             <constraint firstItem="Owz-Ie-LhW" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leading" id="pvz-Cz-2nN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y9O-62-zqu" secondAttribute="trailing" id="py3-GF-rMX"/>
                             <constraint firstItem="Yr6-yH-szJ" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="tAl-fb-WXx"/>
                             <constraint firstItem="vQz-gj-Aev" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="two-lf-tRE"/>
                             <constraint firstItem="iQb-yg-uId" firstAttribute="leading" secondItem="wrT-D1-Nau" secondAttribute="leadingMargin" id="ugE-hW-gGK"/>
@@ -261,6 +275,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="LcG-YF-bQp"/>
+                                <exclude reference="Wgi-Ui-jZC"/>
                             </mask>
                         </variation>
                         <connections>
