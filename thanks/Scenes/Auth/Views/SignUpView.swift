@@ -18,10 +18,14 @@ class SignUpView: UIView {
     override func awakeFromNib() {
         idTextField.keyboardType = .ASCIICapable
         passwordTextField.secureTextEntry = true
+
+        let idTextFieldWrapperView = idTextField.superview as! AnimatePlaceholderTextWrapperView
+        let nameTextFieldWrapperView = nameTextField.superview as! AnimatePlaceholderTextWrapperView
+        let passwordTextFieldWrapperView = passwordTextField.superview as! AnimatePlaceholderTextWrapperView
         
-//        let idTextFieldWrapperView = idTextField.superview as! SignInTextWrapperView
-//        let nameTextFieldWrapperView = nameTextField.superview as! SignInTextWrapperView
-//        let passwordTextFieldWrapperView = passwordTextField.superview as! SignInTextWrapperView
+        idTextFieldWrapperView.textLabel.text = "USER ID"
+        nameTextFieldWrapperView.textLabel.text = "USER NAME"
+        passwordTextFieldWrapperView.textLabel.text = "PASSWORD"
     }
     
 }

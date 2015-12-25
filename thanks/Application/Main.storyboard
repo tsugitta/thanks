@@ -135,10 +135,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaL-x1-t85" customClass="SignInTextWrapperView" customModule="thanks" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaL-x1-t85" customClass="AnimatePlaceholderTextWrapperView" customModule="thanks" customModuleProvider="target">
                                 <rect key="frame" x="36" y="120" width="303" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dg3-lk-jiG" customClass="SignInTextField" customModule="thanks" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dg3-lk-jiG" customClass="AnimatePlaceholderTextField" customModule="thanks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -158,10 +158,10 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-bg-d4n" customClass="SignInTextWrapperView" customModule="thanks" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3o-bg-d4n" customClass="AnimatePlaceholderTextWrapperView" customModule="thanks" customModuleProvider="target">
                                 <rect key="frame" x="36" y="210" width="303" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8os-xW-JSc" customClass="SignInTextField" customModule="thanks" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8os-xW-JSc" customClass="AnimatePlaceholderTextField" customModule="thanks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -181,10 +181,10 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="trigger" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idl-by-VUZ" customClass="SignInTextWrapperView" customModule="thanks" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idl-by-VUZ" customClass="AnimatePlaceholderTextWrapperView" customModule="thanks" customModuleProvider="target">
                                 <rect key="frame" x="36" y="300" width="303" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xfV-mb-SkO" customClass="SignInTextField" customModule="thanks" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xfV-mb-SkO" customClass="AnimatePlaceholderTextField" customModule="thanks" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>

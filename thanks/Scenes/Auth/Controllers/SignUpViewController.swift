@@ -22,9 +22,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         mView.idTextField.delegate = self
         mView.nameTextField.delegate = self
         mView.passwordTextField.delegate = self
-        
-//        let tapGesture = UIGestureRecognizer(target: self, action: "didClickView:")
-//        view.addGestureRecognizer(tapGesture)
     }
 
     func clickSignUpButton(sender: UIButton) {
@@ -59,19 +56,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-//    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-//        let wrapperView = textField.superview as! SignInTextWrapperView
-//        let frame = wrapperView.textLabel.frame
-//        let newY: CGFloat = textField.text.isBlank ? 0 : -20
-//        
-//        UIView.animateWithDuration(0.2, animations: {
-//            wrapperView.textLabel.frame = CGRect(x: frame.origin.x, y: newY, width: frame.width, height: frame.height)
-//        })
-//        return true
-//    }
+    func textFieldDidBeginEditing(textField: UITextField) {
+        let wrapperView = textField.superview as! AnimatePlaceholderTextWrapperView
+        let frame = wrapperView.textLabel.frame
+        let newY: CGFloat = -25
+        let newFontSize: CGFloat = 10.0
+        
+        UIView.animateWithDuration(0.2, animations: {
+            wrapperView.textLabel.frame = CGRect(x: frame.origin.x, y: newY, width: frame.width, height: frame.height)
+            wrapperView.textLabel.font = wrapperView.textLabel.font.fontWithSize(newFontSize)
+        })
+    }
     
-    func didClickView(sender: UIGestureRecognizer) {
-        view.endEditing(true)
+    func textFieldDidEndEditing(textField: UITextField) {
+        let wrapperView = textField.superview as! AnimatePlaceholderTextWrapperView
+        let frame = wrapperView.textLabel.frame
+        let newY: CGFloat = textField.text.isBlank ? 0 : -25
+        let newFontSize: CGFloat = textField.text.isBlank ? 15 : 10
+        
+        UIView.animateWithDuration(0.2, animations: {
+            wrapperView.textLabel.frame = CGRect(x: frame.origin.x, y: newY, width: frame.width, height: frame.height)
+            wrapperView.textLabel.font = wrapperView.textLabel.font.fontWithSize(newFontSize)
+        })
     }
     
     func segueToTabBarViewController() {

@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
 //        if you wanna logout
-//        let defaults = NSUserDefaults.standardUserDefaults()
-//        defaults.removeObjectForKey("AuthToken")
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.removeObjectForKey("AuthToken")
         
         let auth = Auth.sharedInstance
         if auth.alreadyHasToken() {

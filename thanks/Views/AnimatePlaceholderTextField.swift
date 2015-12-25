@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable final
-class SignInTextField: UITextField {
+class AnimatePlaceholderTextField: UITextField {
     
     @IBInspectable var trigger: Bool = true {
         didSet {

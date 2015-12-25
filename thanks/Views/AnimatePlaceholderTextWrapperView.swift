@@ -9,20 +9,21 @@
 import UIKit
 
 @IBDesignable final
-class SignInTextWrapperView: UIView {
+class AnimatePlaceholderTextWrapperView: UIView {
     var textLabel = UILabel()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-//        addSubview(textLabel)
+        addSubview(textLabel)
     }
     
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        let frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-//        textLabel.frame = frame
-//        textLabel.font = UIFont(name: UIFont.standardFontName(), size: 15)
-//    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+        textLabel.frame = frame
+        textLabel.font = UIFont(name: UIFont.standardFontName(), size: 15)
+        textLabel.textColor = UIColor.grayColor()
+    }
     
     @IBInspectable var trigger: Bool = true {
         didSet {
@@ -36,7 +37,7 @@ class SignInTextWrapperView: UIView {
         
         borderBottom.removeFromSuperlayer()
         borderBottom.frame = CGRectMake(0, frame.height - borderWidth, frame.width, borderWidth)
-        borderBottom.backgroundColor = UIColor.darkGrayColor().CGColor
+        borderBottom.backgroundColor = UIColor.lightGrayColor().CGColor
         layer.addSublayer(borderBottom)
     }
     

@@ -43,8 +43,8 @@
 		DF1EE7041C2D0DE4008B2E32 /* UserPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1EE7031C2D0DE4008B2E32 /* UserPage.storyboard */; };
 		DF1EE7071C2D0E9A008B2E32 /* UserPageHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EE7051C2D0E9A008B2E32 /* UserPageHeaderTableViewCell.swift */; };
 		DF1EE7081C2D0E9A008B2E32 /* UserPageHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1EE7061C2D0E9A008B2E32 /* UserPageHeaderTableViewCell.xib */; };
-		DF1EE70C1C2D354B008B2E32 /* SignInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EE70B1C2D354B008B2E32 /* SignInTextField.swift */; };
-		DF1EE70E1C2D3582008B2E32 /* SignInTextWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EE70D1C2D3582008B2E32 /* SignInTextWrapperView.swift */; };
+		DF1EE70C1C2D354B008B2E32 /* AnimatePlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EE70B1C2D354B008B2E32 /* AnimatePlaceholderTextField.swift */; };
+		DF1EE70E1C2D3582008B2E32 /* AnimatePlaceholderTextWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EE70D1C2D3582008B2E32 /* AnimatePlaceholderTextWrapperView.swift */; };
 		DF3C89ED1C2BB5A90086A72F /* AddUser-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3C89EC1C2BB5A90086A72F /* AddUser-100.png */; };
 		DF3C89EF1C2BEEF20086A72F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C89EE1C2BEEF20086A72F /* SearchViewController.swift */; };
 		DF3C89F11C2BEF1B0086A72F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C89F01C2BEF1B0086A72F /* SearchView.swift */; };
@@ -151,8 +151,8 @@
 		DF1EE7031C2D0DE4008B2E32 /* UserPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UserPage.storyboard; path = UserPage/Views/UserPage.storyboard; sourceTree = "<group>"; };
 		DF1EE7051C2D0E9A008B2E32 /* UserPageHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserPageHeaderTableViewCell.swift; path = UserPage/Views/UserPageHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		DF1EE7061C2D0E9A008B2E32 /* UserPageHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserPageHeaderTableViewCell.xib; path = UserPage/Views/UserPageHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		DF1EE70B1C2D354B008B2E32 /* SignInTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTextField.swift; sourceTree = "<group>"; };
-		DF1EE70D1C2D3582008B2E32 /* SignInTextWrapperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTextWrapperView.swift; sourceTree = "<group>"; };
+		DF1EE70B1C2D354B008B2E32 /* AnimatePlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatePlaceholderTextField.swift; sourceTree = "<group>"; };
+		DF1EE70D1C2D3582008B2E32 /* AnimatePlaceholderTextWrapperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatePlaceholderTextWrapperView.swift; sourceTree = "<group>"; };
 		DF3C89EC1C2BB5A90086A72F /* AddUser-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddUser-100.png"; sourceTree = "<group>"; };
 		DF3C89EE1C2BEEF20086A72F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DF3C89F01C2BEF1B0086A72F /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -513,8 +513,8 @@
 				DFB6167C1C2AA90B00DDB58B /* TextFieldContainerWithBorderBottom.swift */,
 				DFC769E21C2C704300ECAD0F /* ThanksTableViewCell.swift */,
 				DFC769E31C2C704300ECAD0F /* ThanksTableViewCell.xib */,
-				DF1EE70B1C2D354B008B2E32 /* SignInTextField.swift */,
-				DF1EE70D1C2D3582008B2E32 /* SignInTextWrapperView.swift */,
+				DF1EE70B1C2D354B008B2E32 /* AnimatePlaceholderTextField.swift */,
+				DF1EE70D1C2D3582008B2E32 /* AnimatePlaceholderTextWrapperView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -796,13 +796,13 @@
 				DF3C89F31C2BEF280086A72F /* SearchViewModel.swift in Sources */,
 				DF0B020B1C24E02600308E55 /* AuthTopViewController.swift in Sources */,
 				DF0B02121C24E02600308E55 /* AuthTopView.swift in Sources */,
-				DF1EE70E1C2D3582008B2E32 /* SignInTextWrapperView.swift in Sources */,
+				DF1EE70E1C2D3582008B2E32 /* AnimatePlaceholderTextWrapperView.swift in Sources */,
 				DF3C89EF1C2BEEF20086A72F /* SearchViewController.swift in Sources */,
 				DF0B01EB1C24E02200308E55 /* Thank.swift in Sources */,
 				DFB6165D1C28836700DDB58B /* MyPageTopViewModel.swift in Sources */,
 				DFB6167D1C2AA90B00DDB58B /* TextFieldContainerWithBorderBottom.swift in Sources */,
 				DF0B01EA1C24E02200308E55 /* Settings.swift in Sources */,
-				DF1EE70C1C2D354B008B2E32 /* SignInTextField.swift in Sources */,
+				DF1EE70C1C2D354B008B2E32 /* AnimatePlaceholderTextField.swift in Sources */,
 				DF3C89F11C2BEF1B0086A72F /* SearchView.swift in Sources */,
 				DF0B020C1C24E02600308E55 /* SignInViewController.swift in Sources */,
 				DF0B01E91C24E02200308E55 /* CurrentUser.swift in Sources */,
