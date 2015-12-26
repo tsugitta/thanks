@@ -40,8 +40,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
 //        searchBar.becomeFirstResponder()
         searchBar.placeholder = "ID or NAME"
         
-        let searchTextField = searchBar.valueForKey("searchField") as! UITextField
-        searchTextField.backgroundColor = UIColor.veryLightGrayColor()
+//        let searchTextField = searchBar.valueForKey("searchField") as! UITextField
+//        searchTextField.backgroundColor = UIColor.veryLightGrayColor()
         navigationItem.titleView = searchBar
         
         let backImage = UIImage(named: "Back-100")?.resize(afterWidth: 22, afterHeight: 22)
