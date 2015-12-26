@@ -16,9 +16,6 @@ thanks.xcodeproj/xcuserdata/
 *.o
 *.pyc
 
-# secure
-thanks/Application/info.plist
-
 # Backup files
 *.swp
 *~.nib
