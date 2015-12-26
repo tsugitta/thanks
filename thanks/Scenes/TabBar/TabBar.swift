@@ -13,7 +13,7 @@ class TabBar: UITabBar {
     // in order to change the tabbar's height
     override func sizeThatFits(size: CGSize) -> CGSize {
         var size = super.sizeThatFits(size)
-        size.height = 35
+        size.height = 40
         return size
     }
     

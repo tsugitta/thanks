@@ -32,10 +32,11 @@ class TabBarViewController: UITabBarController {
 
     func layoutTabBarItems() {
         tabBar.translucent = false
+        tabBar.barTintColor = UIColor.lightOrangeColor()
         tabBar.tintColor = UIColor.deepGrayColor()
         
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: UIFont.standardFontName(), size: 14)!], forState: .Normal)
-        UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0, -6)
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffsetMake(0, -9)
     }
     
 }
